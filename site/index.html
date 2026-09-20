@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Phénix — Communication responsable &amp; conseil RSE</title>
+<meta name="description" content="Green Phénix accompagne les organisations engagées dans leur communication responsable et leur stratégie RSE : audit, contenus, conseil. Basée à Nice.">
+<link rel="canonical" href="https://greenphenix.fr/">
+
+<!-- Favicons -->
+<link rel="icon" href="images/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="images/favicon-16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="images/favicon-32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="images/favicon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+<!-- Open Graph / réseaux sociaux -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Green Phénix">
+<meta property="og:title" content="Green Phénix — Communication responsable & conseil RSE">
+<meta property="og:description" content="Green Phénix accompagne les organisations engagées dans leur communication responsable et leur stratégie RSE : audit, contenus, conseil. Basée à Nice.">
+<meta property="og:image" content="https://greenphenix.fr/images/og-image.jpg">
+<meta property="og:url" content="https://greenphenix.fr/">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Green Phénix — Communication responsable & conseil RSE">
+<meta name="twitter:description" content="Green Phénix accompagne les organisations engagées dans leur communication responsable et leur stratégie RSE : audit, contenus, conseil. Basée à Nice.">
+<meta name="twitter:image" content="https://greenphenix.fr/images/og-image.jpg">
+
+<!-- Données structurées pour les moteurs de recherche -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Green Phénix",
+  "description": "Conseil en communication responsable et stratégie RSE : audit, contenus, accompagnement.",
+  "url": "https://greenphenix.fr/",
+  "image": "https://greenphenix.fr/images/og-image.jpg",
+  "logo": "https://greenphenix.fr/images/logo-icon-160.png",
+  "areaServed": "France",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Nice",
+    "addressCountry": "FR"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/ana%C3%AFs-manchin",
+    "https://www.instagram.com/greenphenix_"
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,900;1,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #cbb5e2;
+    --secondary: #f8f5f0;
+    --accent: #1e3d32;
+    --white: #ffffff;
+    --text: #111111;
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'Work Sans', -apple-system, sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.5;
+  }
+
+  a { text-decoration: none; color: inherit; }
+
+  /* ---------- MENU ---------- */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.9rem 1.75rem;
+    background: rgba(248, 245, 240, 0.82);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(30, 61, 50, 0.08);
+  }
+
+  .nav__logo {
+    display: flex;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  .nav__logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .nav__links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .nav__link {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--accent);
+  }
+
+  .nav__cta {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    background: var(--accent);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.88rem;
+    border-radius: 100px;
+    transition: transform 0.15s ease;
+  }
+
+  .nav__cta:hover,
+  .nav__cta:focus-visible {
+    transform: translateY(-2px);
+  }
+
+  .nav__toggle {
+    display: none;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .nav__toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--accent);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .nav.is-open .nav__toggle span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .nav.is-open .nav__toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav.is-open .nav__toggle span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  @media (max-width: 720px) {
+    .nav__toggle {
+      display: flex;
+    }
+
+    .nav__links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.25rem;
+      background: var(--secondary);
+      padding: 0.5rem 1.75rem 1.5rem;
+      border-bottom: 1px solid rgba(30, 61, 50, 0.08);
+      display: none;
+    }
+
+    .nav.is-open .nav__links {
+      display: flex;
+    }
+
+    .nav__link {
+      width: 100%;
+      padding: 0.75rem 0;
+    }
+
+    .nav__cta {
+      margin-top: 0.5rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .nav__cta, .nav__toggle span { transition: none; }
+  }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative;
+    min-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 6rem 1.5rem;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  .hero__bg {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background-image: url('images/hero-valley.webp');
+    background-size: cover;
+    background-position: center 60%;
+  }
+
+  .hero__bg picture,
+  .hero__bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Darkening filter so white text stays legible over sky/snow */
+  .hero__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+      180deg,
+      rgba(30, 61, 50, 0.55) 0%,
+      rgba(30, 61, 50, 0.35) 35%,
+      rgba(30, 61, 50, 0.65) 100%
+    );
+  }
+
+  .hero__eyebrow {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: var(--accent);
+    background: var(--secondary);
+    padding: 0.45rem 1.1rem;
+    border-radius: 100px;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero__title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(2.75rem, 6vw, 4.5rem);
+    color: var(--white);
+    max-width: 16ch;
+    line-height: 1.08;
+    text-wrap: balance;
+  }
+
+  .hero__body {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 1.05rem;
+    color: var(--secondary);
+    max-width: 44ch;
+    margin-top: 1.5rem;
+    text-wrap: pretty;
+  }
+
+  .hero__cta {
+    display: inline-block;
+    margin-top: 2.5rem;
+    padding: 0.95rem 2.25rem;
+    background: var(--primary);
+    color: var(--accent);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 100px;
+    transition: transform 0.15s ease;
+  }
+
+  .hero__cta:hover,
+  .hero__cta:focus-visible {
+    transform: translateY(-2px);
+  }
+
+  .hero__cta:focus-visible {
+    outline: 3px solid var(--white);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero__cta { transition: none; }
+  }
+
+  @media (max-width: 600px) {
+    .hero { min-height: 100vh; padding: 5rem 1.25rem; }
+  }
+
+  /* ---------- SECTION QUOTE (phrase seule) ---------- */
+  .quote {
+    padding: 5rem 1.5rem;
+    background: var(--white);
+    text-align: center;
+  }
+
+  .quote__text {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(1.6rem, 3vw, 2.3rem);
+    color: var(--accent);
+    max-width: 22ch;
+    line-height: 1.3;
+    margin: 0 auto;
+    text-wrap: balance;
+  }
+
+  /* ---------- SECTION 2 : POURQUOI LA COMMUNICATION RESPONSABLE ---------- */
+  .context {
+    padding: 5rem 1.5rem;
+    background: var(--secondary);
+  }
+
+  .context__inner {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
+  .context__top {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 4rem;
+    align-items: stretch;
+  }
+
+  .context__label {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--primary);
+    padding: 0.4rem 1rem;
+    border-radius: 100px;
+    margin-bottom: 1.25rem;
+  }
+
+  .context__title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+    color: var(--text);
+    line-height: 1.15;
+    max-width: 18ch;
+    margin-bottom: 1.5rem;
+    text-wrap: balance;
+  }
+
+  .context__body {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 1.02rem;
+    color: var(--text);
+    max-width: 52ch;
+    line-height: 1.65;
+    text-wrap: pretty;
+  }
+
+  .context__media {
+    border-radius: 20px;
+    overflow: hidden;
+    min-height: 320px;
+  }
+
+  .context__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .context__stats {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 3.5rem;
+    flex-wrap: wrap;
+  }
+
+  .context__stat {
+    flex: 0 1 220px;
+    background: var(--white);
+    border-radius: 14px;
+    padding: 1.5rem 1.25rem;
+    text-align: center;
+  }
+
+  .context__stat-number {
+    display: block;
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 2.1rem;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .context__stat-label {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 0.85rem;
+    color: var(--text);
+    line-height: 1.35;
+  }
+
+  @media (max-width: 860px) {
+    .context { padding: 4rem 1.25rem; }
+    .quote { padding: 4rem 1.25rem; }
+    .context__top {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .context__media {
+      order: -1;
+      min-height: 240px;
+    }
+    .context__stats {
+      margin-top: 2.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .context__stats { flex-direction: column; align-items: stretch; }
+    .context__stat { flex-basis: auto; }
+  }
+
+  /* ---------- SECTION 3 : MES COMPETENCES CLES ---------- */
+  .skills {
+    padding: 6rem 1.5rem;
+    background: var(--white);
+  }
+
+  .skills__inner {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
+  .skills__title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+    color: var(--accent);
+    text-align: center;
+    max-width: 20ch;
+    margin: 0 auto 3.5rem;
+    text-wrap: balance;
+  }
+
+  .skills__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .skills__card {
+    background: var(--secondary);
+    border-radius: 18px;
+    padding: 1.75rem 1.5rem;
+  }
+
+  .skills__icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .skills__icon img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .skills__card-title {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--accent);
+    line-height: 1.3;
+    margin-bottom: 0.75rem;
+  }
+
+  .skills__card-text {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 0.92rem;
+    color: var(--text);
+    line-height: 1.55;
+  }
+
+  @media (max-width: 980px) {
+    .skills__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .skills { padding: 4.5rem 1.25rem; }
+    .skills__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ---------- SECTION 4 : MES OFFRES ---------- */
+  .offers {
+    padding: 6rem 1.5rem;
+    background: var(--secondary);
+  }
+
+  .offers__inner {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
+  .offers__title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+    color: var(--accent);
+    text-align: center;
+    margin: 0 auto 3.5rem;
+    text-wrap: balance;
+  }
+
+  .offers__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .offer {
+    background: var(--white);
+    border: 1px solid rgba(30, 61, 50, 0.1);
+    border-radius: 22px;
+    padding: 2.5rem 2.25rem;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+
+  .offer:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .offer__badge {
+    display: inline-block;
+    width: fit-content;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--primary);
+    padding: 0.35rem 0.9rem;
+    border-radius: 100px;
+    margin-bottom: 1.5rem;
+  }
+
+  .offer__title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(1.35rem, 2vw, 1.6rem);
+    color: var(--accent);
+    line-height: 1.25;
+    margin-bottom: 1.5rem;
+    transition: color 0.3s ease;
+  }
+
+  .offer:hover .offer__title {
+    color: var(--white);
+  }
+
+  .offer__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-bottom: 2rem;
+  }
+
+  .offer__list li {
+    position: relative;
+    padding-left: 1.3rem;
+    font-family: var(--font-body);
+    font-size: 0.98rem;
+    line-height: 1.5;
+    color: var(--text);
+    transition: color 0.3s ease;
+  }
+
+  .offer__list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    transition: background-color 0.3s ease;
+  }
+
+  .offer:hover .offer__list li {
+    color: var(--secondary);
+  }
+
+  .offer:hover .offer__list li::before {
+    background: var(--primary);
+  }
+
+  .offer__cta {
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: auto;
+    padding: 0.85rem 1.75rem;
+    background: var(--primary);
+    color: var(--accent);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 100px;
+    transition: transform 0.15s ease;
+  }
+
+  .offer__cta:hover,
+  .offer__cta:focus-visible {
+    transform: translateY(-2px);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .offer, .offer__title, .offer__list li, .offer__list li::before, .offer__cta {
+      transition: none;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .offers { padding: 4.5rem 1.25rem; }
+    .offers__grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  /* ---------- SECTION 5 : COMMENT CA SE PASSE ---------- */
+  .process {
+    padding: 6rem 1.5rem;
+    background: var(--white);
+  }
+
+  .process__inner {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
+  .process__title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+    color: var(--accent);
+    text-align: center;
+    margin: 0 auto 3.5rem;
+    text-wrap: balance;
+  }
+
+  .process__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .process__step {
+    text-align: center;
+  }
+
+  .process__number {
+    display: block;
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(2.2rem, 3.4vw, 2.8rem);
+    color: var(--primary);
+    line-height: 1;
+    margin-bottom: 0.75rem;
+  }
+
+  .process__step-title {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
+  }
+
+  .process__step-text {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 0.92rem;
+    color: var(--text);
+    line-height: 1.55;
+    max-width: 24ch;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 860px) {
+    .process { padding: 4.5rem 1.25rem; }
+    .process__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .process__grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  /* ---------- SECTION 6 : QUI SUIS-JE ---------- */
+  .about {
+    padding: 5rem 1.5rem;
+    background: var(--primary);
+  }
+
+  .about__card {
+    max-width: 1140px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: 24px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+  }
+
+  .about__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .about__text {
+    padding: 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .about__label {
+    display: inline-block;
+    width: fit-content;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--secondary);
+    padding: 0.4rem 1rem;
+    border-radius: 100px;
+    margin-bottom: 1.5rem;
+  }
+
+  .about__body p {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--text);
+    line-height: 1.65;
+    margin-bottom: 1.1rem;
+    text-wrap: pretty;
+  }
+
+  .about__signature {
+    display: block;
+    text-align: right;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.15rem;
+    color: var(--accent);
+    margin-top: 1.5rem;
+  }
+
+  @media (max-width: 780px) {
+    .about { padding: 4rem 1.25rem; }
+    .about__card {
+      grid-template-columns: 1fr;
+    }
+    .about__media {
+      aspect-ratio: 4 / 3;
+    }
+    .about__text {
+      padding: 2.25rem 1.75rem;
+    }
+  }
+
+  /* ---------- SECTION 7 : TEMOIGNAGES ---------- */
+  .testimonials {
+    padding: 6rem 1.5rem;
+    background: var(--white);
+  }
+
+  .testimonials__inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .testimonials__title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+    color: var(--accent);
+    text-align: center;
+    margin: 0 auto 3rem;
+    text-wrap: balance;
+  }
+
+  .testimonials__track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 0;
+    border-radius: 20px;
+    scrollbar-width: none;
+  }
+
+  .testimonials__track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .testimonial {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    background: var(--secondary);
+    border-radius: 20px;
+    padding: 2.5rem 2.25rem;
+    box-sizing: border-box;
+  }
+
+  .testimonial__header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .testimonial__avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--primary);
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .testimonial__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .testimonial__person {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .testimonial__name {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--accent);
+  }
+
+  .testimonial__role {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 0.85rem;
+    color: var(--text);
+  }
+
+  .testimonial__quote {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.05rem;
+    color: var(--text);
+    line-height: 1.55;
+    text-wrap: pretty;
+  }
+
+  .testimonials__dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: 1.75rem;
+  }
+
+  .testimonials__dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--primary);
+    opacity: 0.4;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+  }
+
+  .testimonials__dot.is-active {
+    opacity: 1;
+  }
+
+  .testimonials__dot:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  @media (max-width: 600px) {
+    .testimonials { padding: 4.5rem 1.25rem; }
+    .testimonial { padding: 2rem 1.5rem; }
+  }
+
+  /* ---------- SECTION 8 : CONTACT / PIED DE PAGE ---------- */
+  .contact {
+    padding: 6rem 1.5rem 3rem;
+    background: var(--accent);
+    text-align: center;
+  }
+
+  .contact__inner {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .contact__title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+    color: var(--white);
+    margin-bottom: 1rem;
+    text-wrap: balance;
+  }
+
+  .contact__subtitle {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 1.02rem;
+    color: var(--secondary);
+    margin-bottom: 2.25rem;
+    text-wrap: pretty;
+  }
+
+  .contact__cta {
+    display: inline-block;
+    padding: 0.95rem 2.25rem;
+    background: var(--primary);
+    color: var(--accent);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 100px;
+    transition: transform 0.15s ease;
+  }
+
+  .contact__cta:hover,
+  .contact__cta:focus-visible {
+    transform: translateY(-2px);
+  }
+
+  .contact__social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .contact__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(248, 245, 240, 0.12);
+    transition: background-color 0.2s ease;
+  }
+
+  .contact__social-link:hover,
+  .contact__social-link:focus-visible {
+    background: rgba(248, 245, 240, 0.24);
+  }
+
+  .contact__social-link img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .contact__newsletter {
+    margin-top: 2.75rem;
+    background: var(--white);
+    border-radius: 16px;
+    padding: 1.75rem 1.75rem 1.5rem;
+    text-align: left;
+  }
+
+  .contact__newsletter-label {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--primary);
+    padding: 0.35rem 0.9rem;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+  }
+
+  .contact__newsletter-text {
+    font-family: var(--font-body);
+    font-size: 0.92rem;
+    color: var(--text);
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
+
+  .contact__newsletter-form {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .contact__newsletter-input {
+    flex: 1 1 220px;
+    min-width: 0;
+    padding: 0.85rem 1.1rem;
+    border: 1px solid rgba(30, 61, 50, 0.2);
+    border-radius: 100px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--text);
+    background: var(--white);
+  }
+
+  .contact__newsletter-input:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .contact__newsletter-input--prenom {
+    flex-basis: 150px;
+  }
+
+  .contact__newsletter-submit {
+    padding: 0.85rem 1.75rem;
+    background: var(--accent);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+  }
+
+  .contact__newsletter-submit:hover,
+  .contact__newsletter-submit:focus-visible {
+    transform: translateY(-2px);
+  }
+
+  .contact__footer {
+    margin-top: 2.75rem;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    color: rgba(248, 245, 240, 0.75);
+  }
+
+  .contact__footer a {
+    color: rgba(248, 245, 240, 0.9);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .contact__footer a:hover,
+  .contact__footer a:focus-visible {
+    color: var(--white);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .contact__cta, .contact__newsletter-submit { transition: none; }
+  }
+
+  @media (max-width: 600px) {
+    .contact { padding: 4.5rem 1.25rem 2.5rem; }
+    .contact__newsletter { padding: 1.5rem 1.25rem 1.25rem; }
+    .contact__newsletter-form { flex-direction: column; }
+    .contact__newsletter-input { flex-basis: auto; width: 100%; }
+    .contact__newsletter-submit { width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= MENU DE NAVIGATION ================= -->
+<nav class="nav" id="siteNav">
+  <a href="#accueil" class="nav__logo" aria-label="Green Phénix — accueil">
+    <img src="images/logo-icon-160.png" alt="Green Phénix">
+  </a>
+
+  <div class="nav__links">
+    <a href="#accueil" class="nav__link">Accueil</a>
+    <a href="#offres" class="nav__link">Offres</a>
+    <a href="#qui-suis-je" class="nav__link">Qui suis-je</a>
+    <a href="#contact" class="nav__cta">Contact</a>
+  </div>
+
+  <button class="nav__toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ================= SECTION 1 : ACCUEIL / HERO ================= -->
+<section class="hero" id="accueil">
+  <div class="hero__bg" aria-hidden="true"></div>
+  <div class="hero__overlay" aria-hidden="true"></div>
+
+  <p class="hero__eyebrow">Communication responsable &amp; conseil RSE</p>
+  <h1 class="hero__title">Réinventons l'avenir</h1>
+  <p class="hero__body">
+    Green Phénix accompagne les organisations engagées dans une communication RSE
+    crédible, sans&nbsp;greenwashing.
+  </p>
+  <a href="https://calendly.com/anais-manchin-greenphenix/30min" class="hero__cta" target="_blank" rel="noopener">Réserver un appel découverte</a>
+</section>
+
+<!-- ================= SECTION QUOTE (phrase seule) ================= -->
+<section class="quote">
+  <p class="quote__text">Vos engagements méritent d'être racontés.</p>
+</section>
+
+<!-- ================= SECTION 2 : POURQUOI LA COMMUNICATION RESPONSABLE ================= -->
+<section class="context">
+  <div class="context__inner">
+    <div class="context__top">
+      <div class="context__text">
+        <p class="context__label">Le contexte</p>
+        <h2 class="context__title">Pourquoi la communication responsable&nbsp;?</h2>
+
+        <p class="context__body">
+          Les Français ne rejettent pas les engagements des marques par principe, ils attendent
+          simplement qu'on les leur prouve. Nous vivons dans ce que l'ADEME appelle une
+          « société du doute » : l'infobésité, la multiplication des discours et la perte de
+          repères ont fragilisé la confiance envers les grandes organisations. C'est précisément
+          là que la communication responsable prend tout son sens&nbsp;: moins de bruit, plus de
+          preuves, et une vraie place pour l'explication plutôt que la&nbsp;promesse.
+        </p>
+      </div>
+
+      <div class="context__media">
+        <img src="images/section2-boat.webp" alt="Barque en bois posée sur un lac de montagne calme, entouré de sommets enneigés et de forêt" loading="lazy" width="1000" height="1035">
+      </div>
+    </div>
+
+    <div class="context__stats">
+      <div class="context__stat">
+        <span class="context__stat-number">85 %</span>
+        <span class="context__stat-label">des Français ont besoin de preuves</span>
+      </div>
+      <div class="context__stat">
+        <span class="context__stat-number">73 %</span>
+        <span class="context__stat-label">arrêteraient d'acheter auprès d'une entreprise jugée irrespectueuse de la planète ou de la société</span>
+      </div>
+      <div class="context__stat">
+        <span class="context__stat-number">60 %</span>
+        <span class="context__stat-label">estiment que trop de marques utilisent les enjeux de société comme levier marketing</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SECTION 3 : MES COMPETENCES CLES ================= -->
+<section class="skills">
+  <div class="skills__inner">
+    <h2 class="skills__title">Mes compétences clés</h2>
+
+    <div class="skills__grid">
+      <div class="skills__card">
+        <div class="skills__icon" aria-hidden="true">
+          <img src="images/skill-icon-1-communication.png" alt="">
+        </div>
+        <h3 class="skills__card-title">Communication responsable &amp; sociétale</h3>
+        <p class="skills__card-text">Construire des messages clairs, crédibles et alignés sur vos actions réelles, sans&nbsp;greenwashing, avec la preuve comme fil conducteur.</p>
+      </div>
+
+      <div class="skills__card">
+        <div class="skills__icon" aria-hidden="true">
+          <img src="images/skill-icon-2-audit.png" alt="">
+        </div>
+        <h3 class="skills__card-title">Audit &amp; diagnostic RSE</h3>
+        <p class="skills__card-text">Évaluer vos pratiques et votre communication existante à l'aide des ressources sur la communication responsable ADEME, pour identifier les écarts entre le discours et l'acte.</p>
+      </div>
+
+      <div class="skills__card">
+        <div class="skills__icon" aria-hidden="true">
+          <img src="images/skill-icon-3-contenu.png" alt="">
+        </div>
+        <h3 class="skills__card-title">Stratégie de contenu &amp; récits engageants</h3>
+        <p class="skills__card-text">LinkedIn, newsletters, site web&nbsp;: donner à vos engagements une forme qui donne envie d'agir, pas seulement de&nbsp;lire.</p>
+      </div>
+
+      <div class="skills__card">
+        <div class="skills__icon" aria-hidden="true">
+          <img src="images/skill-icon-4-veille.png" alt="">
+        </div>
+        <h3 class="skills__card-title">Veille &amp; décryptage des enjeux RSE</h3>
+        <p class="skills__card-text">Suivre l'actualité de la communication responsable pour repérer les dérives et les bonnes pratiques, et vous aider à vous positionner clairement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SECTION 4 : MES OFFRES ================= -->
+<section class="offers" id="offres">
+  <div class="offers__inner">
+    <h2 class="offers__title">Mes offres</h2>
+
+    <div class="offers__grid">
+      <div class="offer">
+        <span class="offer__badge">Offre phare</span>
+        <h3 class="offer__title">Audit de communication RSE</h3>
+        <ul class="offer__list">
+          <li>Analyse de votre communication actuelle au regard des 3 piliers ADEME&nbsp;: éco-communication, contenu engagé, éthique communicationnelle</li>
+          <li>Vérification des 4 règles essentielles&nbsp;: preuves tangibles, impacts maîtrisés, respect des parties prenantes, engagements cohérents</li>
+          <li>Diagnostic écrit et recommandations concrètes et actionnables</li>
+        </ul>
+        <a href="https://calendly.com/anais-manchin-greenphenix/30min" class="offer__cta" target="_blank" rel="noopener">Réserver un appel découverte →</a>
+      </div>
+
+      <div class="offer">
+        <span class="offer__badge">Offre sur mesure</span>
+        <h3 class="offer__title">Community management pour structures engagées</h3>
+        <ul class="offer__list">
+          <li>Animation LinkedIn, newsletter, site internet en forfait mensuel</li>
+          <li>Création de contenu</li>
+          <li>Une offre sur mesure, adaptée à vos besoins et vos ressources internes</li>
+        </ul>
+        <a href="https://calendly.com/anais-manchin-greenphenix/30min" class="offer__cta" target="_blank" rel="noopener">Réserver un appel découverte →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SECTION 5 : COMMENT CA SE PASSE ================= -->
+<section class="process">
+  <div class="process__inner">
+    <h2 class="process__title">Comment ça se passe&nbsp;?</h2>
+
+    <div class="process__grid">
+      <div class="process__step">
+        <span class="process__number">01</span>
+        <h3 class="process__step-title">Appel découverte</h3>
+        <p class="process__step-text">30 minutes pour comprendre vos enjeux et vérifier qu'on est faits pour travailler ensemble.</p>
+      </div>
+
+      <div class="process__step">
+        <span class="process__number">02</span>
+        <h3 class="process__step-title">Devis &amp; signature</h3>
+        <p class="process__step-text">Une proposition adaptée à votre besoin, sans engagement caché.</p>
+      </div>
+
+      <div class="process__step">
+        <span class="process__number">03</span>
+        <h3 class="process__step-title">Réalisation</h3>
+        <p class="process__step-text">Audit approfondi de votre communication, ou production de contenus selon un calendrier éditorial défini ensemble.</p>
+      </div>
+
+      <div class="process__step">
+        <span class="process__number">04</span>
+        <h3 class="process__step-title">Restitution &amp; suivi</h3>
+        <p class="process__step-text">Diagnostic présenté en direct à l'oral, ou reporting mensuel régulier selon l'offre.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SECTION 6 : QUI SUIS-JE ================= -->
+<section class="about" id="qui-suis-je">
+  <div class="about__card">
+    <div class="about__media">
+      <img src="images/about-anais.webp" alt="Portrait d'Anaïs, fondatrice de Green Phénix, souriante en extérieur" loading="lazy" width="800" height="1066">
+    </div>
+
+    <div class="about__text">
+      <p class="about__label">Qui suis-je&nbsp;?</p>
+
+      <div class="about__body">
+        <p>Après un Bachelor en communication, deux ans d'alternance chez LUMIÅ et un Mastère en transition écologique, j'ai fait un choix simple&nbsp;: allier les deux pour accompagner les organisations qui veulent communiquer autrement.</p>
+
+        <p>Green Phénix, c'est cette double casquette au service de votre communication responsable&nbsp;: la rigueur d'une formation en transition écologique, et le savoir-faire opérationnel d'une communicante de terrain.</p>
+
+        <p>Basée à Nice, je suis également passionnée par la danse, qui m'anime depuis mon plus jeune âge et me permet de me régénérer au quotidien.</p>
+
+        <p>Hâte de découvrir les prochaines opportunités écoresponsables qui s'offriront à moi&nbsp;!</p>
+      </div>
+
+      <span class="about__signature">Anaïs Manchin</span>
+    </div>
+  </div>
+</section>
+
+<!-- Témoignages provisoires (fictifs) — à remplacer par de vrais retours clients -->
+<!-- ================= SECTION 7 : TEMOIGNAGES ================= -->
+<section class="testimonials">
+  <div class="testimonials__inner">
+    <h2 class="testimonials__title">Ils me font confiance</h2>
+
+    <div class="testimonials__track" id="testimonialsTrack">
+      <div class="testimonial">
+        <div class="testimonial__header">
+          <div class="testimonial__avatar">
+            <img src="images/testimonial-bertrand-thuillier.webp" alt="Bertrand Thuillier" width="52" height="52" loading="lazy">
+          </div>
+          <div class="testimonial__person">
+            <span class="testimonial__name">Bertrand Thuillier</span>
+            <span class="testimonial__role">Chargé de Recherche-action &amp; intervention chez LUMIÅ</span>
+          </div>
+        </div>
+        <p class="testimonial__quote">« Un accompagnement bienveillant et précieux dans l'utilisation des moyens de communication modernes, dans la connaissance des modalités d'écriture spécifiques sur ces réseaux. Mais là où elle m'a le plus aidé c'est dans la réalisation de visuels et la mise en page des études, de sa compréhension de mes besoins. »</p>
+      </div>
+
+      <div class="testimonial">
+        <div class="testimonial__header">
+          <div class="testimonial__avatar" aria-hidden="true"></div>
+          <div class="testimonial__person">
+            <span class="testimonial__name">Julien Ferrand</span>
+            <span class="testimonial__role">Fondateur, PME engagée</span>
+          </div>
+        </div>
+        <p class="testimonial__quote">« Green Phénix a su transformer nos engagements en messages concrets et crédibles, loin du greenwashing. »</p>
+      </div>
+
+      <div class="testimonial">
+        <div class="testimonial__header">
+          <div class="testimonial__avatar" aria-hidden="true"></div>
+          <div class="testimonial__person">
+            <span class="testimonial__name">Léa Bonnet</span>
+            <span class="testimonial__role">Chargée de mission RSE, association</span>
+          </div>
+        </div>
+        <p class="testimonial__quote">« Un vrai gain de temps et de sérénité sur notre communication mensuelle, avec un accompagnement pédagogique du début à la fin. »</p>
+      </div>
+    </div>
+
+    <div class="testimonials__dots" id="testimonialsDots"></div>
+  </div>
+</section>
+
+<script>
+  (function () {
+    var nav = document.getElementById('siteNav');
+    var toggle = document.getElementById('navToggle');
+    if (!nav || !toggle) return;
+
+    toggle.addEventListener('click', function () {
+      var isOpen = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    nav.querySelectorAll('.nav__link, .nav__cta').forEach(function (link) {
+      link.addEventListener('click', function () {
+        nav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  })();
+</script>
+
+<script>
+  (function () {
+    var track = document.getElementById('testimonialsTrack');
+    var dotsWrap = document.getElementById('testimonialsDots');
+    if (!track || !dotsWrap) return;
+
+    var slides = Array.prototype.slice.call(track.children);
+    slides.forEach(function (_, i) {
+      var dot = document.createElement('button');
+      dot.className = 'testimonials__dot' + (i === 0 ? ' is-active' : '');
+      dot.setAttribute('aria-label', 'Témoignage ' + (i + 1));
+      dot.addEventListener('click', function () {
+        slides[i].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+      });
+      dotsWrap.appendChild(dot);
+    });
+
+    var dots = Array.prototype.slice.call(dotsWrap.children);
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var idx = slides.indexOf(entry.target);
+          dots.forEach(function (d, i) { d.classList.toggle('is-active', i === idx); });
+        }
+      });
+    }, { root: track, threshold: 0.6 });
+
+    slides.forEach(function (slide) { observer.observe(slide); });
+  })();
+</script>
+
+<!-- ================= SECTION 8 : CONTACT / PIED DE PAGE ================= -->
+<section class="contact" id="contact">
+  <div class="contact__inner">
+    <h2 class="contact__title">Parlons de votre communication</h2>
+    <p class="contact__subtitle">Réservons 30 minutes pour un appel découverte, sans engagement.</p>
+
+    <a href="https://calendly.com/anais-manchin-greenphenix/30min" class="contact__cta" target="_blank" rel="noopener">Réserver un appel découverte →</a>
+
+    <div class="contact__social">
+      <a href="https://www.linkedin.com/in/ana%C3%AFs-manchin" class="contact__social-link" aria-label="Green Phénix sur LinkedIn" target="_blank" rel="noopener">
+        <img src="images/social-icon-linkedin.png" alt="">
+      </a>
+      <a href="https://www.instagram.com/greenphenix_" class="contact__social-link" aria-label="Green Phénix sur Instagram" target="_blank" rel="noopener">
+        <img src="images/social-icon-instagram.png" alt="">
+      </a>
+    </div>
+
+    <div class="contact__newsletter">
+      <span class="contact__newsletter-label">Newsletter</span>
+      <p class="contact__newsletter-text">Une fois par mois, un décryptage RSE concret et non culpabilisant, directement dans votre boîte mail.</p>
+      <form class="contact__newsletter-form" action="https://695a71ee.sibforms.com/serve/MUIFAMI01FJqYUnjaL6LnLABpNjFQWf_sikIzWC7c40HrPjZ0gSJpPFZtRW50SIOlvUpXfLI5WRILJsmuldqeVNvvMZ9VibvPoobIJs_AG7nClXc4z9U6z9b64svbETpafNgivSL4jX_j1EOZk9EvOOhx1mzLxGhMogh_2A2-vFLW_t-eoClIDuNxUMAJUOemNIrKJNLuHyRSL5D4A==" method="post" target="_blank">
+        <input type="text" name="PRENOM" class="contact__newsletter-input contact__newsletter-input--prenom" placeholder="Votre prénom" aria-label="Votre prénom" required>
+        <input type="email" name="EMAIL" class="contact__newsletter-input" placeholder="Votre email" aria-label="Votre email" required>
+        <button type="submit" class="contact__newsletter-submit">S'inscrire</button>
+        <input type="text" name="email_address_check" value="" style="display:none" tabindex="-1" autocomplete="off">
+        <input type="hidden" name="locale" value="fr">
+      </form>
+    </div>
+
+    <p class="contact__footer">
+      © Green Phénix — Anaïs Manchin — <a href="mentions-legales.html">Mentions légales</a> — <a href="politique-confidentialite.html">Politique de confidentialité</a>
+    </p>
+  </div>
+</section>
+
+</body>
+</html>

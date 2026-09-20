@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merci pour votre inscription — Green Phénix</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="images/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="images/favicon-32.png" sizes="32x32">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,900;1,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #cbb5e2;
+    --secondary: #f8f5f0;
+    --accent: #1e3d32;
+    --white: #ffffff;
+    --text: #111111;
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'Work Sans', -apple-system, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: var(--font-body);
+    color: var(--white);
+    background: var(--accent);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+  }
+  .thanks {
+    max-width: 480px;
+    text-align: center;
+  }
+  .thanks__logo {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 2rem;
+    display: block;
+  }
+  .thanks__badge {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--primary);
+    padding: 0.35rem 0.9rem;
+    border-radius: 100px;
+    margin-bottom: 1.5rem;
+  }
+  .thanks h1 {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(1.9rem, 5vw, 2.6rem);
+    margin-bottom: 1.25rem;
+    text-wrap: balance;
+  }
+  .thanks p {
+    font-size: 1rem;
+    color: var(--secondary);
+    margin-bottom: 2rem;
+  }
+  .thanks__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+  }
+  .thanks__cta {
+    display: inline-block;
+    padding: 0.85rem 1.75rem;
+    background: var(--primary);
+    color: var(--accent);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: transform 0.15s ease;
+  }
+  .thanks__cta:hover,
+  .thanks__cta:focus-visible {
+    transform: translateY(-2px);
+  }
+  .thanks__socials {
+    display: flex;
+    gap: 0.9rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  .thanks__socials a {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .thanks__socials img {
+    width: 18px;
+    height: 18px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .thanks__cta { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="thanks">
+  <img src="images/logo-icon-160.png" alt="Green Phénix" class="thanks__logo">
+  <span class="thanks__badge">Inscription confirmée</span>
+  <h1>Merci, votre inscription est bien prise en compte !</h1>
+  <p>Vous recevrez bientôt votre premier décryptage RSE, concret et non culpabilisant, directement dans votre boîte mail.</p>
+  <div class="thanks__links">
+    <a href="index.html" class="thanks__cta">← Retour au site</a>
+  </div>
+  <div class="thanks__socials">
+    <a href="https://www.linkedin.com/in/ana%C3%AFs-manchin" aria-label="Green Phénix sur LinkedIn" target="_blank" rel="noopener">
+      <img src="images/social-icon-linkedin.png" alt="">
+    </a>
+    <a href="https://www.instagram.com/greenphenix_" aria-label="Green Phénix sur Instagram" target="_blank" rel="noopener">
+      <img src="images/social-icon-instagram.png" alt="">
+    </a>
+  </div>
+</div>
+
+</body>
+</html>
