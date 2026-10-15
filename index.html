@@ -138,6 +138,23 @@
     transform: translateY(-2px);
   }
 
+  .nav__portfolio {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    background: var(--primary);
+    color: var(--accent);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.88rem;
+    border-radius: 100px;
+    transition: transform 0.15s ease;
+  }
+
+  .nav__portfolio:hover,
+  .nav__portfolio:focus-visible {
+    transform: translateY(-2px);
+  }
+
   .nav__toggle {
     display: none;
     width: 36px;
@@ -200,14 +217,15 @@
       padding: 0.75rem 0;
     }
 
-    .nav__cta {
+    .nav__cta,
+    .nav__portfolio {
       margin-top: 0.5rem;
     }
   }
 
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
-    .nav__cta, .nav__toggle span { transition: none; }
+    .nav__cta, .nav__portfolio, .nav__toggle span { transition: none; }
   }
 
   /* ---------- HERO ---------- */
@@ -561,15 +579,15 @@
 
   .offers__grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
   }
 
   .offer {
     background: var(--white);
     border: 1px solid rgba(30, 61, 50, 0.1);
     border-radius: 22px;
-    padding: 2.5rem 2.25rem;
+    padding: 2.25rem 1.75rem;
     display: flex;
     flex-direction: column;
     transition: background-color 0.3s ease, border-color 0.3s ease;
@@ -669,6 +687,13 @@
   @media (prefers-reduced-motion: reduce) {
     .offer, .offer__title, .offer__list li, .offer__list li::before, .offer__cta {
       transition: none;
+    }
+  }
+
+  @media (max-width: 980px) {
+    .offers__grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
     }
   }
 
@@ -818,6 +843,25 @@
     font-size: 1.15rem;
     color: var(--accent);
     margin-top: 1.5rem;
+  }
+
+  .about__cta {
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: 1.75rem;
+    padding: 0.85rem 1.75rem;
+    background: var(--accent);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 100px;
+    transition: transform 0.15s ease;
+  }
+
+  .about__cta:hover,
+  .about__cta:focus-visible {
+    transform: translateY(-2px);
   }
 
   @media (max-width: 780px) {
@@ -1112,6 +1156,25 @@
     transform: translateY(-2px);
   }
 
+  .contact__portfolio {
+    display: inline-block;
+    margin-top: 2.25rem;
+    padding: 0.8rem 1.75rem;
+    border: 1.5px solid rgba(248, 245, 240, 0.55);
+    color: var(--secondary);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 100px;
+    transition: transform 0.15s ease, background-color 0.2s ease;
+  }
+
+  .contact__portfolio:hover,
+  .contact__portfolio:focus-visible {
+    background: rgba(248, 245, 240, 0.14);
+    transform: translateY(-2px);
+  }
+
   .contact__footer {
     margin-top: 2.75rem;
     font-family: var(--font-body);
@@ -1131,7 +1194,7 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .contact__cta, .contact__newsletter-submit { transition: none; }
+    .contact__cta, .contact__portfolio, .contact__newsletter-submit { transition: none; }
   }
 
   @media (max-width: 600px) {
@@ -1155,6 +1218,7 @@
     <a href="#accueil" class="nav__link">Accueil</a>
     <a href="#offres" class="nav__link">Offres</a>
     <a href="#qui-suis-je" class="nav__link">Qui suis-je</a>
+    <a href="https://greenphenix.fr/portfolio/anaismanchin" class="nav__portfolio">Portfolio</a>
     <a href="#contact" class="nav__cta">Contact</a>
   </div>
 
@@ -1273,9 +1337,22 @@
         <span class="offer__badge">Offre phare</span>
         <h3 class="offer__title">Audit de communication RSE</h3>
         <ul class="offer__list">
-          <li>Analyse de votre communication actuelle au regard des 3 piliers ADEME&nbsp;: éco-communication, contenu engagé, éthique communicationnelle</li>
-          <li>Vérification des 4 règles essentielles&nbsp;: preuves tangibles, impacts maîtrisés, respect des parties prenantes, engagements cohérents</li>
-          <li>Diagnostic écrit et recommandations concrètes et actionnables</li>
+          <li>Analyse de votre communication actuelle avec ma grille d&#8209;audit&nbsp;: une note finale et un commentaire par critère</li>
+          <li>Grille fondée sur le Guide de la communication responsable de l'ADEME&nbsp;: les 3 piliers et les 4 règles essentielles (preuves tangibles, impacts maîtrisés, parties prenantes, engagements cohérents)</li>
+          <li>Repérage des risques de greenwashing et des écarts entre vos discours et vos actions</li>
+          <li>Restitution en direct à l'oral, avec des recommandations concrètes et priorisées</li>
+        </ul>
+        <a href="https://calendly.com/anais-manchin-greenphenix/30min" class="offer__cta" target="_blank" rel="noopener">Réserver un appel découverte →</a>
+      </div>
+
+      <div class="offer">
+        <span class="offer__badge">Programme 6 semaines</span>
+        <h3 class="offer__title">Programme Envol&nbsp;: votre communication LinkedIn en 6&nbsp;semaines</h3>
+        <ul class="offer__list">
+          <li>Diagnostic de départ de votre communication (LinkedIn, site) selon les règles ADEME, avec un point de départ chiffré</li>
+          <li>Ligne éditoriale, calendrier, guide «&nbsp;ce que vous pouvez dire, ce que vous devez prouver&nbsp;» et 3 gabarits Canva</li>
+          <li>6 posts LinkedIn et 1 newsletter, chacun contrôlé par une checklist de conformité avant publication</li>
+          <li>Bilan de lancement et point de suivi à 3 mois inclus</li>
         </ul>
         <a href="https://calendly.com/anais-manchin-greenphenix/30min" class="offer__cta" target="_blank" rel="noopener">Réserver un appel découverte →</a>
       </div>
@@ -1348,6 +1425,7 @@
       </div>
 
       <span class="about__signature">Anaïs Manchin</span>
+      <a href="https://greenphenix.fr/portfolio/anaismanchin" class="about__cta">Découvrir mon portfolio →</a>
     </div>
   </div>
 </section>
@@ -1369,7 +1447,7 @@
             <span class="testimonial__role">Directeur développement chez LUMIÅ</span>
           </div>
         </div>
-        <p class="testimonial__quote">« J'ai eu la chance de travailler 2 ans avec Anaïs chez LUMIÅ, sur des missions variées de communication responsable : animation Linkedin, création de visuels, montage video, mise en page de rapports, organisation d'évènements... C'est un plaisir de travailler avec Anaïs, toujours réactive, disponible, et avec de fortes capacités d'adaptation. Et par ailleurs, Anaïs est très sensible, formée et informée sur les sujets environnementaux et sociétaux, elle est donc en capacité d'apporter une vraie valeur ajoutée constructive sur les contenus. Merci pour tout ce que tu as apporté ! »</p>
+        <p class="testimonial__quote">« J'ai eu la chance de travailler 2 ans avec Anaïs chez Lumia, sur des missions variées de communication responsable : animation Linkedin, création de visuels, montage video, mise en page de rapports, organisation d'évènements... C'est un plaisir de travailler avec Anaïs, toujours réactive, disponible, et avec de fortes capacités d'adaptation. Et par ailleurs, Anaïs est très sensible, formée et informée sur les sujets environnementaux et sociétaux, elle est donc en capacité d'apporter une vraie valeur ajoutée constructive sur les contenus. Merci pour tout ce que tu as apporté ! »</p>
       </div>
 
       <div class="testimonial">
@@ -1414,7 +1492,7 @@
       toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
 
-    nav.querySelectorAll('.nav__link, .nav__cta').forEach(function (link) {
+    nav.querySelectorAll('.nav__link, .nav__cta, .nav__portfolio').forEach(function (link) {
       link.addEventListener('click', function () {
         nav.classList.remove('is-open');
         toggle.setAttribute('aria-expanded', 'false');
@@ -1483,6 +1561,8 @@
         <input type="hidden" name="locale" value="fr">
       </form>
     </div>
+
+    <a href="https://greenphenix.fr/portfolio/anaismanchin" class="contact__portfolio">Voir mon portfolio →</a>
 
     <p class="contact__footer">
       © Green Phénix — Anaïs Manchin — <a href="mentions-legales.html">Mentions légales</a> — <a href="politique-confidentialite.html">Politique de confidentialité</a>
