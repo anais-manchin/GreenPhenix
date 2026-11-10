@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Portfolio d'Anaïs Manchin · Green Phénix</title>
 <meta name="description" content="Portfolio d'Anaïs Manchin, consultante en communication responsable et conseil RSE à Nice : études de cas, projets de Mastère et créations.">
 <link rel="canonical" href="https://greenphenix.fr/portfolio/anaismanchin">
 <link rel="icon" type="image/png" href="https://greenphenix.fr/images/logo-icon-160.png">
@@ -22,6 +21,8 @@
 <meta name="twitter:title" content="Portfolio d'Anaïs Manchin · Green Phénix">
 <meta name="twitter:description" content="Portfolio d'Anaïs Manchin, consultante en communication responsable et conseil RSE à Nice : études de cas, projets de Mastère et créations.">
 <meta name="twitter:image" content="https://greenphenix.fr/portfolio/img/apercu-partage.jpg">
+
+<title>Portfolio d'Anaïs Manchin · Green Phénix</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;800&display=swap">
@@ -104,8 +105,9 @@ html.js .cas.actif{display:block}
 .etiquettes{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none}
 .etiquettes li{font-size:.85rem;padding:4px 10px;background:var(--lavande-pale);color:var(--vert);border-radius:4px;font-weight:600}
 
-.couvertures{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:40px}
-.couvertures figure{margin:0}
+.couvertures{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.couvertures + .liens-bulletins{margin-bottom:40px}
+.couvertures figure{margin:0;min-width:0}
 .couvertures img{border:1px solid var(--trait)}
 figcaption{font-size:.85rem;color:var(--gris);margin-top:8px}
 
@@ -134,9 +136,11 @@ figcaption{font-size:.85rem;color:var(--gris);margin-top:8px}
 
 /* Préconisations */
 .precos{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.precos.quatre{grid-template-columns:repeat(2,1fr)}
 .preco{background:var(--creme);border-top:4px solid var(--lavande);padding:22px;display:grid;gap:10px;align-content:start}
 .preco-num{font-size:.75rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--vert-doux)}
 .preco h4{margin:0;font-size:1.15rem;line-height:1.25;color:var(--encre)}
+.preco > p:not(.preco-num){font-size:.96rem}
 .preco ul{margin:0;padding-left:1.1em;display:grid;gap:6px;font-size:.96rem}
 
 
@@ -197,6 +201,38 @@ table.grille td:first-child{width:auto;white-space:nowrap}
 .fermer{position:absolute;top:-14px;right:-14px;width:38px;height:38px;border-radius:50%;border:0;background:#fff;color:var(--encre);font-size:1.4rem;cursor:pointer;line-height:1}
 @media (prefers-reduced-motion:reduce){.tuile img{transition:none}}
 
+
+/* Planches Falicon */
+.planches{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.planche{all:unset;box-sizing:border-box;display:grid;gap:8px;width:100%;cursor:zoom-in}
+.planche img{width:100%;border:1px solid var(--trait);transition:transform .3s ease,box-shadow .3s ease}
+.planche:hover img{transform:translateY(-3px);box-shadow:0 10px 24px rgba(30,61,50,.15)}
+.planche:focus-visible{outline:3px solid var(--vert);outline-offset:4px}
+.planche span{font-size:.88rem;color:var(--gris);font-weight:600}
+.liens-bulletins{display:flex;flex-wrap:wrap;gap:10px}
+.liens-bulletins .profil-lien{margin-left:0}
+.visionneuse.large{max-width:min(96vw,1400px)}
+.visionneuse.large img{max-height:86vh}
+@media (prefers-reduced-motion:reduce){.planche img{transition:none}}
+
+
+/* Guide des associations */
+.edition{display:grid;gap:12px}
+.edition + .edition{margin-top:28px}
+.planches-guide{list-style:none;margin:0;padding:0;display:grid;gap:16px;align-items:start}
+.planches-guide.v1{grid-template-columns:repeat(4,1fr)}
+.planches-guide.v2{grid-template-columns:1fr 2fr 2fr}
+
+
+/* Affiches */
+.format{display:grid;gap:12px}
+.format + .format{margin-top:28px}
+.planches-affiches{list-style:none;margin:0;padding:0;display:grid;gap:14px;align-items:start}
+.planches-affiches.a3,.planches-affiches.carre{grid-template-columns:repeat(5,1fr)}
+.planches-affiches.programme{grid-template-columns:1fr 1.41fr 1.41fr;max-width:900px}
+.planches-affiches.autres{grid-template-columns:1fr 1fr 1fr 2.1fr}
+.planches-affiches.carre img{border-radius:6px}
+
 /* Galeries */
 .duo{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
 .galerie-schemas{display:grid;grid-template-columns:1fr 1fr;gap:20px}
@@ -253,7 +289,12 @@ table.liste td.montant{white-space:nowrap;font-variant-numeric:tabular-nums;colo
   .frise{grid-template-columns:1fr;gap:0;border-left:3px solid var(--lavande);margin-left:6px}
   .frise li{border-top:0;padding:0 0 26px 24px}
   .frise li::before{top:3px;left:-9px}
-  .diffusion,.duo,.precos,.personas,.canaux{grid-template-columns:1fr}
+  .diffusion,.duo,.precos,.personas,.canaux,.planches{grid-template-columns:1fr}
+  .planches-guide.v1{grid-template-columns:1fr 1fr}
+  .planches-guide.v2{grid-template-columns:1fr}
+  .planches-affiches.a3,.planches-affiches.carre{grid-template-columns:repeat(3,1fr)}
+  .planches-affiches.autres{grid-template-columns:1fr 1fr 1fr}
+  .planches-affiches.autres li:last-child{grid-column:1 / -1}
   .enjeux{grid-template-columns:1fr 1fr}
 }
 @media (max-width:520px){
@@ -261,6 +302,9 @@ table.liste td.montant{white-space:nowrap;font-variant-numeric:tabular-nums;colo
   .marque span{display:none}
   .chiffre strong{font-size:1.65rem}
   .carrousel{grid-template-columns:1fr 1fr;gap:10px}
+  .planches-affiches.a3,.planches-affiches.carre,.planches-affiches.autres{grid-template-columns:1fr 1fr}
+  .planches-affiches.programme{grid-template-columns:1fr 1fr}
+  .planches-affiches.programme li:first-child{grid-column:1 / -1;max-width:60%}
   .enjeux{grid-template-columns:1fr}
   .retour{white-space:nowrap}
   .intro{padding-block:40px 28px}
@@ -268,6 +312,7 @@ table.liste td.montant{white-space:nowrap;font-variant-numeric:tabular-nums;colo
 </style>
 </head>
 <body>
+
 <div class="wrap">
 
 <header class="entete">
@@ -278,7 +323,7 @@ table.liste td.montant{white-space:nowrap;font-variant-numeric:tabular-nums;colo
 <section class="intro">
   <p class="surtitre">Portfolio</p>
   <h1>Communiquer <em>juste</em> sur des engagements réels.</h1>
-  <p class="lecture">Je suis Anaïs Manchin, consultante en communication responsable et conseils RSE à Nice et fondatrice de Green Phénix. Chaque projet présente le contexte, mon rôle précis, la démarche suivie et, lorsqu'ils existent, les résultats mesurés. Vous y trouverez mes missions en alternance chez LUMIÅ, centre de recherche sur les modèles régénératifs, mes projets de Mastère Transition écologique et solidaire à Green Management School et un projet personnel.</p>
+  <p class="lecture">Je suis Anaïs Manchin, consultante en communication responsable et conseils RSE à Nice et fondatrice de Green Phénix. Chaque projet présente le contexte, mon rôle précis, la démarche suivie et, lorsqu'ils existent, les résultats mesurés. Vous y trouverez mes missions en alternance chez LUMIÅ, centre de recherche sur les modèles régénératifs, et en stage à la Mairie de Falicon, mes projets de Mastère Transition écologique et solidaire à Green Management School et un projet personnel.</p>
   <a class="une" href="#living-place">
     <span class="une-label">À la une</span>
     <span class="une-titre">Stratégie de communication responsable pour Living Place</span>
@@ -293,6 +338,9 @@ table.liste td.montant{white-space:nowrap;font-variant-numeric:tabular-nums;colo
       <li><a href="#tourisme-regeneratif">Tourisme régénératif</a></li>
       <li><a href="#urbanisme-regeneratif">Urbanisme régénératif</a></li>
       <li><a href="#campagne-ulule">Campagne de financement participatif : Le Phare</a></li>
+      <li><a href="#falicon-infos">Bulletin municipal de Falicon</a></li>
+      <li><a href="#guide-associations">Guide des associations de Falicon</a></li>
+      <li><a href="#affiches-falicon">Affiches de Falicon</a></li>
     </ul>
   </div>
   <div class="rang">
@@ -351,6 +399,10 @@ table.liste td.montant{white-space:nowrap;font-variant-numeric:tabular-nums;colo
       <img src="img/tourisme/couverture-synthese.webp" width="900" height="636" alt="Couverture de la synthèse de l'étude sur le tourisme régénératif." loading="lazy">
       <figcaption>Version synthétique</figcaption>
     </figure>
+  </div>
+
+  <div class="liens-bulletins">
+    <a class="profil-lien" href="https://lumia-edu.fr/publications/" target="_blank" rel="noopener">Consulter l'étude et sa synthèse</a>
   </div>
 
   <div class="chiffres">
@@ -493,6 +545,10 @@ table.liste td.montant{white-space:nowrap;font-variant-numeric:tabular-nums;colo
       <img src="img/urbanisme/couverture-guide.webp" width="900" height="637" loading="lazy" alt="Couverture du guide méthodologique, synthèse de l'étude sur l'urbanisme régénératif.">
       <figcaption>Guide méthodologique, synthèse de l'étude</figcaption>
     </figure>
+  </div>
+
+  <div class="liens-bulletins">
+    <a class="profil-lien" href="https://lumia-edu.fr/publications/" target="_blank" rel="noopener">Consulter l'étude et sa synthèse</a>
   </div>
 
   <div class="chiffres">
@@ -708,6 +764,313 @@ table.liste td.montant{white-space:nowrap;font-variant-numeric:tabular-nums;colo
 
   <p class="credits">Campagne portée par l'équipe de LUMIÅ. Les visuels et les chiffres sont présentés avec l'accord de LUMIÅ.</p>
 </article>
+
+<!-- ================= PROJET PROFESSIONNEL : FALICON ================= -->
+<article class="cas" id="falicon-infos">
+
+  <div class="cas-tete">
+    <p class="surtitre">Mairie de Falicon · Stages au service communication · 2022 et 2023</p>
+    <h2>Mettre en page le bulletin municipal de Falicon</h2>
+    <ul class="etiquettes">
+      <li>Mise en page éditoriale</li><li>InDesign</li><li>Photoshop</li><li>Canva</li><li>Rédaction</li><li>Retouche photo pour l'impression</li><li>Communication publique</li>
+    </ul>
+  </div>
+
+  <div class="cadrage">
+    <div class="bloc">
+      <h3>Contexte</h3>
+      <p>Falicon est un village perché des hauteurs de Nice. Deux fois par an, la mairie distribue gratuitement dans toutes les boîtes aux lettres le <em>Falicon Infos</em>, un bulletin de 68 pages qui retrace les actualités des six derniers mois. Une seule personne assure le graphisme et la communication de la commune : j'ai rejoint ce service en renfort, le temps de deux stages, en 2022 puis en 2023.</p>
+    </div>
+    <div class="bloc">
+      <h3>Objectifs du bulletin</h3>
+      <ul>
+        <li>Rendre l'information municipale claire pour tous les âges</li>
+        <li>Renouveler la maquette pour garder l'intérêt des lecteurs</li>
+        <li>Livrer à l'imprimeur des fichiers prêts à imprimer</li>
+      </ul>
+    </div>
+    <div class="bloc">
+      <h3>Mon rôle</h3>
+      <ul>
+        <li>Aide à la mise en page des articles sur InDesign, aux côtés de la chargée de communication</li>
+        <li>Rédaction de quelques articles, synthèse et relecture des textes des élus et des associations</li>
+        <li>Participation à la recherche typographique pour renouveler la maquette</li>
+        <li>Sélection et retouche des photos pour l'impression</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="chiffres">
+    <div class="chiffre"><strong>68</strong><span>pages par numéro du bulletin municipal</span></div>
+    <div class="chiffre"><strong>2</strong><span>éditions auxquelles j'ai contribué, en 2022 et en 2023</span></div>
+    <div class="chiffre"><strong>11</strong><span>articles mis en page dès le premier stage</span></div>
+    <div class="chiffre"><strong>15</strong><span>articles mis en page lors du second stage</span></div>
+  </div>
+
+  <section class="section">
+    <h3>Le déroulé du stage 2023</h3>
+    <ol class="frise">
+      <li><time>Mi-mai 2023</time><strong>Prise en main</strong><span>Réunion de préparation et découverte du fichier InDesign du bulletin de 68 pages</span></li>
+      <li><time>Mai – juin</time><strong>Recherche typographique</strong><span>Essais de typographies et de nouveaux éléments graphiques avec la chargée de communication</span></li>
+      <li class="fort"><time>Juin – juillet</time><strong>Articles et mise en page</strong><span>Synthèse, relecture et mise en page de quinze articles, validés par la tutrice puis par la Maire</span></li>
+      <li><time>Juillet – août</time><strong>Préparation à l'impression</strong><span>Retouche des photos, passage en CMJN et export pour l'imprimeur</span></li>
+      <li><time>Septembre 2023</time><strong>Parution</strong><span>Distribution du bulletin dans toutes les boîtes aux lettres de la commune</span></li>
+    </ol>
+  </section>
+
+  <section class="section">
+    <h3>Les coulisses de la mise en page</h3>
+    <p class="lecture">Le bulletin est un travail collectif. Voici quatre pages auxquelles j'ai particulièrement contribué.</p>
+    <div class="precos quatre">
+      <div class="preco">
+        <p class="preco-num">Synthétiser</p>
+        <h4>Nouveautés chez Lignes d'Azur</h4>
+        <p>À partir de mails, de prospectus et de sites internet, j'ai construit une double page claire sur les nouvelles cartes et les nouveaux tarifs, en ajoutant un encadré sur le Scolabus, utile aux familles du village.</p>
+      </div>
+      <div class="preco">
+        <p class="preco-num">Actualiser</p>
+        <h4>Xylella fastidiosa</h4>
+        <p>Un an après ma double page sur les nuisibles, la bactérie touchait davantage la commune. J'ai repris l'article pour ne garder que l'essentiel et les nouveautés, dans un bandeau d'un tiers de page, avec un schéma pour la reconnaître.</p>
+      </div>
+      <div class="preco">
+        <p class="preco-num">Choisir</p>
+        <h4>Fête de l'œillet</h4>
+        <p>Pour l'événement phare du village, j'ai sélectionné huit photos parmi plus d'une centaine, afin d'illustrer chacune des animations des trois jours de fête.</p>
+      </div>
+      <div class="preco">
+        <p class="preco-num">Créer de A à Z</p>
+        <h4>Maison durable</h4>
+        <p>Sujet libre pour la rubrique environnement : recherche, rédaction, mise en page et retouche photo des gestes pour une maison plus durable.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h3>Les doubles pages</h3>
+    <p class="lecture">Cliquez sur une double page pour l'agrandir et la lire, ou consultez les bulletins complets en ligne.</p>
+    <div class="liens-bulletins">
+      <a class="profil-lien" href="https://www.calameo.com/read/00037286589dc6b01140a" target="_blank" rel="noopener">Consulter le bulletin 2022</a>
+      <a class="profil-lien" href="https://www.calameo.com/read/000372865b71c71f22247" target="_blank" rel="noopener">Consulter le bulletin 2023</a>
+    </div>
+    <ul class="planches">
+      <li><button type="button" class="planche" data-src="img/falicon/infos-pratiques-lignes-azur.webp" data-legende="Infos pratiques : nouveautés chez Lignes d'Azur et Scolabus."><img src="img/falicon/infos-pratiques-lignes-azur-mini.webp" width="760" height="538" loading="lazy" alt="Double page « Nouveautés chez Lignes d'Azur » : visuel de la Ma Carte, explications et grille tarifaire, encadré Scolabus."><span>Infos pratiques · Lignes d'Azur</span></button></li>
+      <li><button type="button" class="planche" data-src="img/falicon/infos-pratiques-recensement-xylella.webp" data-legende="Infos pratiques : campagne de recensement des puits et forages, et bandeau sur la Xylella fastidiosa."><img src="img/falicon/infos-pratiques-recensement-xylella-mini.webp" width="760" height="538" loading="lazy" alt="Double page « Campagne de recensement, puits et forages » avec un bandeau sur la Xylella fastidiosa et son schéma de zone délimitée."><span>Infos pratiques · Recensement et Xylella</span></button></li>
+      <li><button type="button" class="planche" data-src="img/falicon/evenements-fete-oeillet.webp" data-legende="Événements : la Fête de l'œillet, huit photos sélectionnées parmi plus d'une centaine."><img src="img/falicon/evenements-fete-oeillet-mini.webp" width="760" height="538" loading="lazy" alt="Double page « Fête de l'œillet » : grande photo du village en fête, portrait floral de Frida Kahlo, citation de la présidente et mosaïque de photos."><span>Événements · Fête de l'œillet</span></button></li>
+      <li><button type="button" class="planche" data-src="img/falicon/evenements-saint-jean-fete-patronale.webp" data-legende="Événements : la fête de la Saint-Jean et la fête patronale."><img src="img/falicon/evenements-saint-jean-fete-patronale-mini.webp" width="760" height="538" loading="lazy" alt="Double page « Fête de la Saint-Jean » et « Fête patronale » avec une mosaïque de photos du feu de la Saint-Jean et des animations."><span>Événements · Saint-Jean et fête patronale</span></button></li>
+      <li><button type="button" class="planche" data-src="img/falicon/environnement-maison-durable.webp" data-legende="Environnement : programme « Rénovons ensemble » et article « Maison durable »."><img src="img/falicon/environnement-maison-durable-mini.webp" width="760" height="538" loading="lazy" alt="Double page environnement : « Rénovons ensemble », programme d'amélioration de l'habitat, et « Maison durable », gestes du quotidien illustrés par une maison végétale."><span>Environnement · Maison durable</span></button></li>
+      <li><button type="button" class="planche" data-src="img/falicon/sport-team-tri-mounta-cala.webp" data-legende="Sport : Falicon Team Tri et la course La Mounta Cala."><img src="img/falicon/sport-team-tri-mounta-cala-mini.webp" width="760" height="538" loading="lazy" alt="Double page sport : « Falicon Team Tri » et « La Mounta Cala », avec photos des participants et citation du président."><span>Sport · Team Tri et Mounta Cala</span></button></li>
+      <li><button type="button" class="planche" data-src="img/falicon/jeunesse-centre-loisirs.webp" data-legende="Jeunesse : le programme du centre de loisirs."><img src="img/falicon/jeunesse-centre-loisirs-mini.webp" width="760" height="538" loading="lazy" alt="Double page jeunesse « Le centre de loisirs, un programme chargé » avec une mosaïque de photos d'activités."><span>Jeunesse · Centre de loisirs</span></button></li>
+      <li><button type="button" class="planche" data-src="img/falicon/jeunesse-demenagement-ecole.webp" data-legende="Jeunesse : le déménagement dans la nouvelle école du village."><img src="img/falicon/jeunesse-demenagement-ecole-mini.webp" width="760" height="538" loading="lazy" alt="Double page jeunesse « Un déménagement réussi, une nouvelle école pour nos écoliers » avec photos de la journée."><span>Jeunesse · Nouvelle école</span></button></li>
+    </ul>
+  </section>
+
+  <aside class="bilan">
+    <h3>Ce que j'en retiens</h3>
+    <ul>
+      <li><strong>La mise en page sert la lecture.</strong> Un lecteur ne lit un article que s'il le trouve facile à lire : hiérarchie des titres, place des photos et équilibre du texte comptent autant que le sujet.</li>
+      <li><strong>L'écran n'est pas le papier.</strong> Préparer un bulletin, c'est aussi préparer l'impression : redimensionner, passer en CMJN, éclaircir les photos et les exporter au bon format.</li>
+      <li><strong>Défendre ses choix et intégrer les retours.</strong> Chaque page passait par la relecture de ma tutrice et de la Maire. J'ai appris à argumenter un choix visuel quand il servait la compréhension, et à m'adapter aux attentes quand il le fallait.</li>
+    </ul>
+  </aside>
+
+  <p class="credits">Bulletin publié par la Mairie de Falicon. Pages réalisées en binôme avec la chargée de communication de la commune.</p>
+</article>
+
+<!-- ================= PROJET PROFESSIONNEL : GUIDE DES ASSOCIATIONS ================= -->
+<article class="cas" id="guide-associations">
+
+  <div class="cas-tete">
+    <p class="surtitre">Mairie de Falicon · Stages au service communication · 2022 et 2023</p>
+    <h2>Concevoir le guide des associations de Falicon</h2>
+    <ul class="etiquettes">
+      <li>Conception éditoriale</li><li>Mise en page</li><li>InDesign</li><li>Photoshop</li><li>Canva</li><li>Création de logo</li><li>Impression et façonnage</li><li>Relations avec les associations</li>
+    </ul>
+  </div>
+
+  <div class="cadrage">
+    <div class="bloc">
+      <h3>Contexte</h3>
+      <p>Falicon compte plus d'une vingtaine d'associations, de la culture au sport en passant par les fêtes et le social. Aucun support ne les réunissait. Lors de mon premier stage, la mairie m'a confié la création d'un livret pour les présenter aux habitants. Un an plus tard, j'en ai conçu une nouvelle édition.</p>
+    </div>
+    <div class="bloc">
+      <h3>Objectifs</h3>
+      <ul>
+        <li>Réunir toutes les associations du village dans un seul support</li>
+        <li>Aider les familles et les nouveaux habitants à trouver une activité</li>
+        <li>Valoriser la vie associative de la commune</li>
+      </ul>
+    </div>
+    <div class="bloc">
+      <h3>Mon rôle</h3>
+      <p>J'ai conçu et réalisé le guide de bout en bout, avec les relectures de la chargée de communication et de la Maire :</p>
+      <ul>
+        <li>Recensement des associations et rédaction de leurs présentations</li>
+        <li>Couverture, sommaire et mise en page</li>
+        <li>Création du logo du Club du plus bel âge</li>
+        <li>Validation par les associations, impression et façonnage</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="chiffres">
+    <div class="chiffre"><strong>2</strong><span>éditions conçues : 2022-2023 et 2023-2024</span></div>
+    <div class="chiffre"><strong>20+</strong><span>associations présentées</span></div>
+    <div class="chiffre"><strong>7</strong><span>rubriques, de la culture au sport</span></div>
+    <div class="chiffre"><strong>100</strong><span>livrets imprimés, massicotés et agrafés à la main pour la première édition</span></div>
+  </div>
+
+  <section class="section">
+    <h3>De l'idée au livret</h3>
+    <ol class="frise">
+      <li><time>Fin mai 2022</time><strong>Recensement</strong><span>Associations réunies à partir du site de la mairie, de l'ancien bulletin et de leurs propres sites et réseaux</span></li>
+      <li><time>Juin 2022</time><strong>Maquette et retours</strong><span>Mise en page commencée sur Photoshop puis finalisée sur InDesign, impressions de test, chemin de fer et corrections successives</span></li>
+      <li><time>Fin juin 2022</time><strong>Validation</strong><span>Envoi du guide à chaque association par email ou sur Facebook pour vérifier ses informations</span></li>
+      <li class="fort"><time>Juillet 2022</time><strong>Impression et façonnage</strong><span>Logo du Club du plus bel âge, puis 100 livrets imprimés et assemblés pour la rentrée</span></li>
+      <li><time>Été 2023</time><strong>Nouvelle édition</strong><span>Nouvelles associations, nouvelle maquette et préparation des fichiers selon les consignes de l'imprimeur</span></li>
+    </ol>
+  </section>
+
+  <section class="section">
+    <h3>Deux éditions, deux maquettes</h3>
+    <div class="edition">
+      <p class="preco-num">Édition 2022-2023</p>
+      <p class="lecture">Ma première mise en page : un fond turquoise, des cadres jaunes et un pictogramme par rubrique, jusqu'à l'annonce du forum des associations de la rentrée.</p>
+      <ul class="planches-guide v1">
+        <li><button type="button" class="planche" data-src="img/guide-associations/2022-couverture.webp" data-legende="Édition 2022-2023 : la couverture."><img src="img/guide-associations/2022-couverture-mini.webp" width="380" height="538" loading="lazy" alt="Couverture du Guide des associations faliconnaises, édition 2022-2023 : bulle de pictogrammes d'activités et personnages dessinés."><span>Couverture</span></button></li>
+        <li><button type="button" class="planche" data-src="img/guide-associations/2022-edito-sommaire.webp" data-legende="Édition 2022-2023 : édito et sommaire en sept rubriques."><img src="img/guide-associations/2022-edito-sommaire-mini.webp" width="380" height="538" loading="lazy" alt="Page édito et sommaire de l'édition 2022-2023, avec les sept rubriques et les labels de la commune."><span>Édito et sommaire</span></button></li>
+        <li><button type="button" class="planche" data-src="img/guide-associations/2022-sport.webp" data-legende="Édition 2022-2023 : une page de la rubrique Sport et loisirs."><img src="img/guide-associations/2022-sport-mini.webp" width="380" height="538" loading="lazy" alt="Page sport de l'édition 2022-2023 : judo et poney, avec photos, horaires et contacts."><span>Sport et loisirs</span></button></li>
+        <li><button type="button" class="planche" data-src="img/guide-associations/2022-forum.webp" data-legende="Édition 2022-2023 : l'annonce du forum des associations."><img src="img/guide-associations/2022-forum-mini.webp" width="380" height="538" loading="lazy" alt="Page d'annonce du Forum des associations faliconnaises du samedi 3 septembre."><span>Forum des associations</span></button></li>
+      </ul>
+    </div>
+    <div class="edition">
+      <p class="preco-num">Édition 2023-2024</p>
+      <p class="lecture">Une maquette repensée : un fond blanc plus lisible, un bandeau de couleur par rubrique, un édito illustré par le village et de nouvelles associations.</p>
+      <ul class="planches-guide v2">
+        <li><button type="button" class="planche" data-src="img/guide-associations/2023-couverture.webp" data-legende="Édition 2023-2024 : la couverture."><img src="img/guide-associations/2023-couverture-mini.webp" width="380" height="537" loading="lazy" alt="Couverture du Guide des associations faliconnaises, édition 2023-2024."><span>Couverture</span></button></li>
+        <li><button type="button" class="planche" data-src="img/guide-associations/2023-edito-sommaire.webp" data-legende="Édition 2023-2024 : édito illustré et sommaire par couleur de rubrique."><img src="img/guide-associations/2023-edito-sommaire-mini.webp" width="760" height="538" loading="lazy" alt="Double page de l'édition 2023-2024 : édito avec une photo panoramique de Falicon et sommaire coloré par rubrique."><span>Édito et sommaire</span></button></li>
+        <li><button type="button" class="planche" data-src="img/guide-associations/2023-social-sport.webp" data-legende="Édition 2023-2024 : rubriques Social et Sports."><img src="img/guide-associations/2023-social-sport-mini.webp" width="760" height="538" loading="lazy" alt="Double page de l'édition 2023-2024 : associations sociales et sportives avec photos, horaires et contacts."><span>Social et sports</span></button></li>
+      </ul>
+    </div>
+  </section>
+
+  <aside class="bilan">
+    <h3>Ce que j'en retiens</h3>
+    <ul>
+      <li><strong>Mener un projet de A à Z.</strong> De la collecte des informations jusqu'au chemin de fer et à l'agrafage des livrets, j'ai vu toutes les étapes d'un support imprimé.</li>
+      <li><strong>Choisir le bon outil.</strong> Commencer la maquette sur Photoshop m'a montré ses limites pour la mise en page : ce projet m'a menée vers InDesign.</li>
+      <li><strong>Intégrer les retours de plusieurs interlocuteurs.</strong> Chargée de communication, Maire, présidents d'associations : chaque version a été améliorée grâce à leurs remarques, et les présidents ont accueilli le guide avec enthousiasme.</li>
+    </ul>
+  </aside>
+
+  <p class="credits">Guide édité par la Mairie de Falicon. Conception et réalisation : Anaïs Manchin, avec les relectures de la chargée de communication et de la Maire.</p>
+</article>
+
+<!-- ================= PROJET PROFESSIONNEL : AFFICHES ================= -->
+<article class="cas" id="affiches-falicon">
+
+  <div class="cas-tete">
+    <p class="surtitre">Mairie de Falicon · Stage au service communication · 2023</p>
+    <h2>Concevoir les affiches de la commune, du papier à Instagram</h2>
+    <ul class="etiquettes">
+      <li>Affiches</li><li>Identité visuelle</li><li>Déclinaison Instagram</li><li>Hiérarchie de l'information</li><li>InDesign</li><li>Photoshop</li><li>Canva</li>
+    </ul>
+  </div>
+
+  <div class="cadrage">
+    <div class="bloc">
+      <h3>Contexte</h3>
+      <p>À Falicon, chaque événement et chaque annonce de la mairie passe à la fois par l'affichage et par les réseaux sociaux. Les habitants les plus âgés s'informent surtout par les affiches, tandis que les plus jeunes suivent la mairie sur Instagram. Pendant mon stage de 2023, j'ai conçu une grande partie des affiches de la commune, dans les deux formats.</p>
+    </div>
+    <div class="bloc">
+      <h3>Objectifs</h3>
+      <ul>
+        <li>Annoncer les événements de façon lisible et attractive</li>
+        <li>Toucher chaque public sur le support qu'il consulte</li>
+        <li>Rendre visibles les financements publics des équipements</li>
+      </ul>
+    </div>
+    <div class="bloc">
+      <h3>Mon rôle</h3>
+      <ul>
+        <li>Conception graphique des affiches et des programmes</li>
+        <li>Déclinaison de chaque visuel au format Instagram</li>
+        <li>Création d'une charte commune pour la série des Soirées estivales</li>
+        <li>Intégration des retours de la chargée de communication et de la Maire</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="chiffres">
+    <div class="chiffre"><strong>5</strong><span>affiches pour la série des Soirées estivales</span></div>
+    <div class="chiffre"><strong>2</strong><span>formats par visuel : l'affiche imprimée et le carré Instagram</span></div>
+    <div class="chiffre"><strong>3</strong><span>supports pour le programme : un A4 et un carrousel de deux visuels</span></div>
+    <div class="chiffre"><strong>17</strong><span>visuels réalisés au total</span></div>
+  </div>
+
+  <section class="section">
+    <h3>Les Soirées estivales 06</h3>
+    <p class="lecture">Cinq spectacles gratuits place Bellevue, organisés avec le Département des Alpes-Maritimes en juillet et en août. J'ai conçu une charte commune pour toute la série : le même bandeau, la date en très grand, le lieu et la gratuité bien visibles, et une couleur d'accent propre à chaque soirée.</p>
+
+    <div class="format">
+      <p class="preco-num">Format affiche · A3</p>
+      <ul class="planches-affiches a3">
+        <li><button type="button" class="planche" data-src="img/affiches/estivales-a3-bluffeur.webp" data-legende="Affiche A3 : Le Bluffeur, vendredi 21 juillet."><img src="img/affiches/estivales-a3-bluffeur-mini.webp" width="300" height="424" loading="lazy" alt="Affiche A3 de la soirée estivale « Le Bluffeur » (pièce de théâtre), vendredi 21 juillet à 21 h place Bellevue, entrée gratuite."><span>Le Bluffeur</span></button></li>
+        <li><button type="button" class="planche" data-src="img/affiches/estivales-a3-jimi-hendrix.webp" data-legende="Affiche A3 : Légende to Jimi Hendrix, vendredi 28 juillet."><img src="img/affiches/estivales-a3-jimi-hendrix-mini.webp" width="300" height="424" loading="lazy" alt="Affiche A3 de la soirée estivale « Légende to Jimi Hendrix » (concert), vendredi 28 juillet à 21 h place Bellevue, entrée gratuite."><span>Légende to Jimi Hendrix</span></button></li>
+        <li><button type="button" class="planche" data-src="img/affiches/estivales-a3-bossa-nova.webp" data-legende="Affiche A3 : Bossa Nova, vendredi 4 août."><img src="img/affiches/estivales-a3-bossa-nova-mini.webp" width="300" height="424" loading="lazy" alt="Affiche A3 de la soirée estivale « Bossa Nova » (concert), vendredi 4 août à 21 h place Bellevue, entrée gratuite."><span>Bossa Nova</span></button></li>
+        <li><button type="button" class="planche" data-src="img/affiches/estivales-a3-nougaro.webp" data-legende="Affiche A3 : Hommage Nougaro, vendredi 11 août."><img src="img/affiches/estivales-a3-nougaro-mini.webp" width="300" height="424" loading="lazy" alt="Affiche A3 de la soirée estivale « Hommage Nougaro » (concert), vendredi 11 août à 21 h place Bellevue, entrée gratuite."><span>Hommage Nougaro</span></button></li>
+        <li><button type="button" class="planche" data-src="img/affiches/estivales-a3-xavier-polycarpe.webp" data-legende="Affiche A3 : Xavier Polycarpe, mercredi 16 août."><img src="img/affiches/estivales-a3-xavier-polycarpe-mini.webp" width="300" height="424" loading="lazy" alt="Affiche A3 de la soirée estivale « Xavier Polycarpe » (concert), mercredi 16 août à 21 h place Bellevue, entrée gratuite."><span>Xavier Polycarpe</span></button></li>
+      </ul>
+    </div>
+
+    <div class="format">
+      <p class="preco-num">Format Instagram · carré</p>
+      <p class="lecture">Chaque affiche est recomposée pour le fil Instagram, sans perdre la hiérarchie de l'information : le titre, la date et le lieu restent lisibles sur un écran de téléphone.</p>
+      <ul class="planches-affiches carre">
+        <li><button type="button" class="planche" data-src="img/affiches/estivales-insta-bluffeur.webp" data-legende="Format Instagram : Le Bluffeur, vendredi 21 juillet."><img src="img/affiches/estivales-insta-bluffeur-mini.webp" width="300" height="300" loading="lazy" alt="Version carrée pour Instagram de l&#39;affiche « Le Bluffeur », vendredi 21 juillet."></button></li>
+        <li><button type="button" class="planche" data-src="img/affiches/estivales-insta-jimi-hendrix.webp" data-legende="Format Instagram : Légende to Jimi Hendrix, vendredi 28 juillet."><img src="img/affiches/estivales-insta-jimi-hendrix-mini.webp" width="300" height="300" loading="lazy" alt="Version carrée pour Instagram de l&#39;affiche « Légende to Jimi Hendrix », vendredi 28 juillet."></button></li>
+        <li><button type="button" class="planche" data-src="img/affiches/estivales-insta-bossa-nova.webp" data-legende="Format Instagram : Bossa Nova, vendredi 4 août."><img src="img/affiches/estivales-insta-bossa-nova-mini.webp" width="300" height="300" loading="lazy" alt="Version carrée pour Instagram de l&#39;affiche « Bossa Nova », vendredi 4 août."></button></li>
+        <li><button type="button" class="planche" data-src="img/affiches/estivales-insta-nougaro.webp" data-legende="Format Instagram : Hommage Nougaro, vendredi 11 août."><img src="img/affiches/estivales-insta-nougaro-mini.webp" width="300" height="300" loading="lazy" alt="Version carrée pour Instagram de l&#39;affiche « Hommage Nougaro », vendredi 11 août."></button></li>
+        <li><button type="button" class="planche" data-src="img/affiches/estivales-insta-xavier-polycarpe.webp" data-legende="Format Instagram : Xavier Polycarpe, mercredi 16 août."><img src="img/affiches/estivales-insta-xavier-polycarpe-mini.webp" width="300" height="300" loading="lazy" alt="Version carrée pour Instagram de l&#39;affiche « Xavier Polycarpe », mercredi 16 août."></button></li>
+      </ul>
+    </div>
+
+    <div class="format">
+      <p class="preco-num">Le programme · A4 et carrousel Instagram</p>
+      <ul class="planches-affiches programme">
+        <li><button type="button" class="planche" data-src="img/affiches/estivales-programme-a4.webp" data-legende="Programme A4 des Soirées estivales 2023."><img src="img/affiches/estivales-programme-a4-mini.webp" width="360" height="509" loading="lazy" alt="Programme A4 des Soirées estivales 06 à Falicon : les cinq soirées avec photo, date et description."><span>Programme A4</span></button></li>
+        <li><button type="button" class="planche" data-src="img/affiches/estivales-programme-insta-1.webp" data-legende="Carrousel Instagram, visuel 1 : les soirées de juillet."><img src="img/affiches/estivales-programme-insta-1-mini.webp" width="360" height="360" loading="lazy" alt="Premier visuel du carrousel Instagram : soirées du 21 et du 28 juillet."><span>Carrousel · 1/2</span></button></li>
+        <li><button type="button" class="planche" data-src="img/affiches/estivales-programme-insta-2.webp" data-legende="Carrousel Instagram, visuel 2 : les soirées d&#39;août."><img src="img/affiches/estivales-programme-insta-2-mini.webp" width="360" height="360" loading="lazy" alt="Second visuel du carrousel Instagram : soirées du 4, du 11 et du 16 août."><span>Carrousel · 2/2</span></button></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <h3>Les autres affiches</h3>
+    <ul class="planches-affiches autres">
+      <li><button type="button" class="planche" data-src="img/affiches/cocktail-bienvenue.webp" data-legende="Invitation au cocktail de bienvenue des nouveaux habitants."><img src="img/affiches/cocktail-bienvenue-mini.webp" width="300" height="424" loading="lazy" alt="Affiche « Cocktail de bienvenue » de la mairie de Falicon, le 8 septembre à 18 h 30, avec une citation de la Maire."><span>Cocktail de bienvenue</span></button></li>
+      <li><button type="button" class="planche" data-src="img/affiches/financement-police-municipale.webp" data-legende="Affiche de financement : équipements de la police municipale."><img src="img/affiches/financement-police-municipale-mini.webp" width="300" height="424" loading="lazy" alt="Affiche présentant la subvention de la Région Sud pour les équipements de la police municipale, avec la liste des achats et leur coût."><span>Financement · police municipale</span></button></li>
+      <li><button type="button" class="planche" data-src="img/affiches/financement-stade.webp" data-legende="Affiche de financement : confortement et réaménagement du stade."><img src="img/affiches/financement-stade-mini.webp" width="300" height="424" loading="lazy" alt="Affiche présentant les financements du Département, de la Région et de l&#39;État pour le réaménagement du stade, avec une vue du projet."><span>Financement · stade</span></button></li>
+      <li><button type="button" class="planche" data-src="img/affiches/page-vie-du-village.webp" data-legende="Page « Vie du village » : le nouveau stade et l&#39;agenda de septembre."><img src="img/affiches/page-vie-du-village-mini.webp" width="640" height="430" loading="lazy" alt="Page magazine « Vie du village » : article sur le nouveau stade avec photos et agenda illustré des événements de septembre."><span>Page « Vie du village »</span></button></li>
+    </ul>
+  </section>
+
+  <aside class="bilan">
+    <h3>Ce que j'en retiens</h3>
+    <ul>
+      <li><strong>Une série se reconnaît au premier coup d'œil.</strong> Garder la même structure d'une affiche à l'autre permet au public d'identifier immédiatement les Soirées estivales, la couleur suffisant à distinguer chaque date.</li>
+      <li><strong>Un message, plusieurs formats.</strong> Une affiche ne se réduit pas pour Instagram : elle se recompose, pour rester lisible sur un téléphone et toucher un public différent.</li>
+      <li><strong>L'information pratique d'abord.</strong> Date, lieu, horaire et gratuité doivent se lire avant tout le reste, quel que soit le support.</li>
+    </ul>
+  </aside>
+
+  <p class="credits">Visuels réalisés pour la Mairie de Falicon lors de mon stage, avec les relectures de la chargée de communication et de la Maire.</p>
+</article>
+
+
+
+
+
+
 
 <!-- ================= PROJET D'ÉCOLE 2 ================= -->
 <article class="cas" id="living-place">
@@ -1131,8 +1494,9 @@ table.liste td.montant{white-space:nowrap;font-variant-numeric:tabular-nums;colo
   var d=document.getElementById('visionneuse');
   if(!d||typeof d.showModal!=='function')return;
   var img=d.querySelector('img'),leg=d.querySelector('p');
-  document.querySelectorAll('.tuile').forEach(function(b){
+  document.querySelectorAll('.tuile, .planche').forEach(function(b){
     b.addEventListener('click',function(){
+      d.classList.toggle('large',b.classList.contains('planche'));
       img.src=b.getAttribute('data-src');
       img.alt=b.querySelector('img').alt;
       leg.textContent=b.getAttribute('data-legende')||'';
@@ -1142,5 +1506,6 @@ table.liste td.montant{white-space:nowrap;font-variant-numeric:tabular-nums;colo
   d.addEventListener('click',function(e){if(e.target===d)d.close();});
 })();
 </script>
+
 </body>
 </html>
