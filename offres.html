@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Offres et tarifs — Green Phénix</title>
+<meta name="description" content="Diagnostic express offert, atelier « Communiquer juste », audit de communication RSE en trois formules, accompagnement et community management : les offres et tarifs de Green Phénix.">
+<link rel="canonical" href="https://greenphenix.fr/offres">
+
+<link rel="icon" href="images/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="images/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Green Phénix">
+<meta property="og:title" content="Offres et tarifs — Green Phénix">
+<meta property="og:description" content="Commencez par un diagnostic offert, puis choisissez : apprendre à le faire vous-même, faire vérifier votre communication, ou constituer vos preuves.">
+<meta property="og:image" content="https://greenphenix.fr/images/og-image.jpg">
+<meta property="og:url" content="https://greenphenix.fr/offres">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,900;1,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #cbb5e2;
+    --secondary: #f8f5f0;
+    --accent: #1e3d32;
+    --white: #ffffff;
+    --text: #111111;
+    --muted: #4a4a4a;
+    --line: rgba(30, 61, 50, 0.14);
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'Work Sans', -apple-system, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-body); color: var(--text); background: var(--white); line-height: 1.55; }
+  a { color: inherit; text-decoration: none; }
+  :focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
+  section[id] { scroll-margin-top: 80px; }
+
+  /* ---------- MENU ---------- */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.9rem 1.75rem;
+    background: rgba(248, 245, 240, 0.82);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(30, 61, 50, 0.08);
+  }
+
+  .nav__logo {
+    display: flex;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  .nav__logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .nav__links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .nav__link {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--accent);
+  }
+
+  .nav__cta {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    background: var(--accent);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.88rem;
+    border-radius: 100px;
+    transition: transform 0.15s ease;
+  }
+
+  .nav__cta:hover,
+  .nav__cta:focus-visible {
+    transform: translateY(-2px);
+  }
+
+  .nav__portfolio {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    background: var(--primary);
+    color: var(--accent);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.88rem;
+    border-radius: 100px;
+    transition: transform 0.15s ease;
+  }
+
+  .nav__portfolio:hover,
+  .nav__portfolio:focus-visible {
+    transform: translateY(-2px);
+  }
+
+  .nav__toggle {
+    display: none;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .nav__toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--accent);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .nav.is-open .nav__toggle span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .nav.is-open .nav__toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav.is-open .nav__toggle span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  @media (max-width: 720px) {
+    .nav__toggle {
+      display: flex;
+    }
+
+    .nav__links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.25rem;
+      background: var(--secondary);
+      padding: 0.5rem 1.75rem 1.5rem;
+      border-bottom: 1px solid rgba(30, 61, 50, 0.08);
+      display: none;
+    }
+
+    .nav.is-open .nav__links {
+      display: flex;
+    }
+
+    .nav__link {
+      width: 100%;
+      padding: 0.75rem 0;
+    }
+
+    .nav__cta,
+    .nav__portfolio {
+      margin-top: 0.5rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .nav__cta, .nav__portfolio, .nav__toggle span { transition: none; }
+  }
+
+  /* ---------- COMMUNS ---------- */
+  .wrap { max-width: 1080px; margin: 0 auto; }
+  .band { padding: 5rem 1.5rem; }
+  .band--cream { background: var(--secondary); }
+  .eyebrow {
+    display: inline-block; padding: 0.35rem 0.9rem; border-radius: 100px;
+    background: var(--primary); color: var(--accent);
+    font-weight: 600; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase;
+  }
+  .h2 { font-family: var(--font-display); font-weight: 900; color: var(--accent); font-size: clamp(1.7rem, 3vw, 2.3rem); line-height: 1.15; margin: 0.9rem 0 0.8rem; text-wrap: balance; }
+  .lead { font-size: 1.05rem; max-width: 680px; color: var(--muted); }
+  .btn {
+    display: inline-block; padding: 0.9rem 1.75rem; border-radius: 100px; border: 2px solid var(--accent);
+    font-weight: 600; font-size: 0.98rem; text-align: center; transition: transform 0.15s ease;
+  }
+  .btn:hover, .btn:focus-visible { transform: translateY(-2px); }
+  .btn--primary { background: var(--accent); color: var(--white); }
+  .btn--secondary { background: transparent; color: var(--accent); }
+  .btn--light { background: var(--primary); border-color: var(--primary); color: var(--accent); }
+  .actions { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1.75rem; }
+  .note { font-size: 0.85rem; color: var(--muted); margin-top: 1rem; }
+  .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+  /* ---------- EN-TÊTE ---------- */
+  .intro { background: var(--secondary); padding: 4.5rem 1.5rem 4rem; }
+  .intro__title { font-family: var(--font-display); font-weight: 900; color: var(--accent); font-size: clamp(2.1rem, 5vw, 3.2rem); line-height: 1.1; margin: 1rem 0 1.1rem; max-width: 18ch; text-wrap: balance; }
+
+  /* ---------- PARCOURS ---------- */
+  .path { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; position: relative; }
+  .path::before { content: ''; position: absolute; top: 1.25rem; left: 16%; right: 16%; height: 2px; background: var(--primary); }
+  .path li { position: relative; text-align: center; }
+  .path__num { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; border-radius: 50%; background: var(--accent); color: var(--white); font-weight: 600; margin-bottom: 0.9rem; box-shadow: 0 0 0 6px var(--secondary); }
+  .path h3 { font-family: var(--font-display); color: var(--accent); font-size: 1.25rem; margin-bottom: 0.35rem; }
+  .path p { font-size: 0.95rem; color: var(--muted); max-width: 26ch; margin: 0 auto; }
+  .intro__cta { margin-top: 2.75rem; text-align: center; }
+  @media (max-width: 760px) {
+    .path { grid-template-columns: 1fr; gap: 1.5rem; }
+    .path::before { top: 1.25rem; bottom: 1.25rem; left: 1.25rem; right: auto; width: 2px; height: auto; }
+    .path li { text-align: left; display: grid; grid-template-columns: 2.5rem 1fr; column-gap: 1rem; }
+    .path__num { grid-row: span 2; margin-bottom: 0; }
+    .path p { margin: 0; max-width: none; }
+  }
+
+  /* ---------- CHOISIR ---------- */
+  .pick { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 2.5rem; }
+  .pick__card { border: 1px solid var(--line); border-radius: 18px; padding: 1.6rem 1.4rem; display: flex; flex-direction: column; background: var(--white); }
+  .pick__q { font-family: var(--font-display); font-style: italic; font-weight: 400; color: var(--accent); font-size: 1.2rem; line-height: 1.3; margin-bottom: 0.8rem; }
+  .pick__card p { font-size: 0.95rem; margin-bottom: 1.1rem; }
+  .pick__card a { margin-top: auto; font-weight: 600; color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+  @media (max-width: 860px) { .pick { grid-template-columns: 1fr; } }
+
+  /* ---------- DÉTAIL D'UNE OFFRE ---------- */
+  .offer { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: start; }
+  .offer__body p + p { margin-top: 0.9rem; }
+  .facts { list-style: none; display: grid; gap: 0.65rem; margin-top: 1.25rem; }
+  .facts li { position: relative; padding-left: 1.3rem; }
+  .facts li::before { content: ''; position: absolute; left: 0; top: 0.6em; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+  .box { background: var(--white); border: 1px solid var(--line); border-radius: 18px; padding: 1.6rem 1.5rem; }
+  .band--cream .box { background: var(--white); }
+  .box h3 { font-family: var(--font-display); color: var(--accent); font-size: 1.25rem; margin-bottom: 0.7rem; }
+  .price { font-family: var(--font-display); font-weight: 900; color: var(--accent); font-size: 2rem; line-height: 1.1; }
+  .price small { font-family: var(--font-body); font-weight: 500; font-size: 0.95rem; color: var(--muted); }
+  @media (max-width: 860px) { .offer { grid-template-columns: 1fr; gap: 1.75rem; } }
+
+  /* ---------- TABLEAU DES FORMULES ---------- */
+  .table-wrap { position: relative; margin-top: 2.25rem; overflow-x: auto; border-radius: 18px; border: 1px solid var(--line); background: var(--white); }
+  table { width: 100%; border-collapse: collapse; min-width: 640px; font-size: 0.95rem; }
+  caption { text-align: left; padding: 1rem 1.25rem 0; color: var(--muted); font-size: 0.88rem; }
+  th, td { padding: 0.9rem 1.1rem; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  thead th { font-family: var(--font-display); color: var(--accent); font-size: 1.1rem; vertical-align: bottom; }
+  thead th .tag { display: block; font-family: var(--font-body); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); background: var(--primary); width: fit-content; padding: 0.2rem 0.6rem; border-radius: 100px; margin-bottom: 0.4rem; }
+  tbody th { font-weight: 600; color: var(--accent); width: 26%; }
+  tr:last-child th, tr:last-child td { border-bottom: none; }
+  .col-hl { background: rgba(203, 181, 226, 0.16); }
+  .yes::before { content: '✓ '; color: var(--accent); font-weight: 700; }
+  .no { color: var(--muted); }
+  .t-price { font-family: var(--font-display); font-weight: 900; color: var(--accent); font-size: 1.35rem; }
+  .t-price s { font-family: var(--font-body); font-weight: 400; font-size: 0.9rem; color: var(--muted); margin-right: 0.3rem; }
+
+  /* ---------- EXEMPLE D'AUDIT ---------- */
+  .sample { margin-top: 2rem; background: var(--white); border-radius: 18px; border: 1px solid var(--line); overflow: hidden; }
+  .sample__head { background: var(--accent); color: var(--secondary); padding: 0.9rem 1.4rem; font-size: 0.88rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem; }
+  .sample__head strong { color: var(--white); }
+  .sample dl { display: grid; grid-template-columns: 200px 1fr; }
+  .sample dt, .sample dd { padding: 1rem 1.4rem; border-bottom: 1px solid var(--line); }
+  .sample dt { font-weight: 600; color: var(--accent); background: var(--secondary); }
+  .sample dd:last-of-type, .sample dt:last-of-type { border-bottom: none; }
+  .sample q { font-style: italic; }
+  .score { display: inline-block; padding: 0.15rem 0.6rem; border-radius: 100px; background: #f3d9d9; color: #7a1d1d; font-weight: 600; font-size: 0.85rem; }
+  @media (max-width: 640px) { .sample dl { grid-template-columns: 1fr; } .sample dt { border-bottom: none; padding-bottom: 0.3rem; } .sample dd { padding-top: 0.3rem; } }
+
+  /* ---------- FAQ ---------- */
+  .faq { max-width: 780px; margin-top: 2rem; }
+  .faq details { border-bottom: 1px solid var(--line); }
+  .faq summary { cursor: pointer; list-style: none; padding: 1.1rem 2rem 1.1rem 0; font-weight: 600; color: var(--accent); position: relative; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: '+'; position: absolute; right: 0.25rem; top: 0.95rem; font-size: 1.4rem; line-height: 1; }
+  .faq details[open] summary::after { content: '–'; }
+  .faq details p { padding: 0 0 1.2rem; }
+
+  /* ---------- APPEL FINAL ---------- */
+  .final { background: var(--primary); color: var(--accent); text-align: center; padding: 4.5rem 1.5rem; }
+  .final p { max-width: 600px; margin: 0 auto; }
+  .final .actions { justify-content: center; }
+
+
+  @media (max-width: 600px) { .band { padding: 3.75rem 1.25rem; } .intro { padding: 3.5rem 1.25rem 3rem; } }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
+  /* ---------- SECTION 8 : CONTACT / PIED DE PAGE ---------- */
+  .contact {
+    padding: 6rem 1.5rem 3rem;
+    background: var(--accent);
+    text-align: center;
+  }
+
+  .contact__alt { margin-top: 1rem; font-size: 0.95rem; }
+  .contact__alt a { color: var(--secondary); text-decoration: underline; text-underline-offset: 3px; }
+
+  .contact__inner {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .contact__title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+    color: var(--white);
+    margin-bottom: 1rem;
+    text-wrap: balance;
+  }
+
+  .contact__subtitle {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 1.02rem;
+    color: var(--secondary);
+    margin-bottom: 2.25rem;
+    text-wrap: pretty;
+  }
+
+  .contact__cta {
+    display: inline-block;
+    padding: 0.95rem 2.25rem;
+    background: var(--primary);
+    color: var(--accent);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 100px;
+    transition: transform 0.15s ease;
+  }
+
+  .contact__cta:hover,
+  .contact__cta:focus-visible {
+    transform: translateY(-2px);
+  }
+
+  .contact__social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .contact__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(248, 245, 240, 0.12);
+    transition: background-color 0.2s ease;
+  }
+
+  .contact__social-link:hover,
+  .contact__social-link:focus-visible {
+    background: rgba(248, 245, 240, 0.24);
+  }
+
+  .contact__social-link img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .contact__newsletter {
+    margin-top: 2.75rem;
+    background: var(--white);
+    border-radius: 16px;
+    padding: 1.75rem 1.75rem 1.5rem;
+    text-align: left;
+  }
+
+  .contact__newsletter-label {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--primary);
+    padding: 0.35rem 0.9rem;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+  }
+
+  .contact__newsletter-text {
+    font-family: var(--font-body);
+    font-size: 0.92rem;
+    color: var(--text);
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
+
+  .contact__newsletter-form {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .contact__newsletter-input {
+    flex: 1 1 220px;
+    min-width: 0;
+    padding: 0.85rem 1.1rem;
+    border: 1px solid rgba(30, 61, 50, 0.2);
+    border-radius: 100px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--text);
+    background: var(--white);
+  }
+
+  .contact__newsletter-input:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .contact__newsletter-input--prenom {
+    flex-basis: 150px;
+  }
+
+  .contact__newsletter-submit {
+    padding: 0.85rem 1.75rem;
+    background: var(--accent);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+  }
+
+  .contact__newsletter-submit:hover,
+  .contact__newsletter-submit:focus-visible {
+    transform: translateY(-2px);
+  }
+
+  .contact__portfolio {
+    display: inline-block;
+    margin-top: 2.25rem;
+    padding: 0.8rem 1.75rem;
+    border: 1.5px solid rgba(248, 245, 240, 0.55);
+    color: var(--secondary);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 100px;
+    transition: transform 0.15s ease, background-color 0.2s ease;
+  }
+
+  .contact__portfolio:hover,
+  .contact__portfolio:focus-visible {
+    background: rgba(248, 245, 240, 0.14);
+    transform: translateY(-2px);
+  }
+
+  .contact__footer {
+    margin-top: 2.75rem;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    color: rgba(248, 245, 240, 0.75);
+  }
+
+  .contact__footer a {
+    color: rgba(248, 245, 240, 0.9);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .contact__footer a:hover,
+  .contact__footer a:focus-visible {
+    color: var(--white);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .contact__cta, .contact__portfolio, .contact__newsletter-submit { transition: none; }
+  }
+
+  @media (max-width: 600px) {
+    .contact { padding: 4.5rem 1.25rem 2.5rem; }
+    .contact__newsletter { padding: 1.5rem 1.25rem 1.25rem; }
+    .contact__newsletter-form { flex-direction: column; }
+    .contact__newsletter-input { flex-basis: auto; width: 100%; }
+    .contact__newsletter-submit { width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="siteNav">
+  <a href="/" class="nav__logo" aria-label="Green Phénix — accueil">
+    <img src="images/logo-icon-160.png" alt="Green Phénix">
+  </a>
+
+  <div class="nav__links">
+    <a href="/" class="nav__link">Accueil</a>
+    <a href="/offres" class="nav__link">Offres</a>
+    <a href="/#qui-suis-je" class="nav__link">Qui suis-je</a>
+    <a href="#contact" class="nav__link">Contact</a>
+    <a href="https://greenphenix.fr/portfolio/anaismanchin" class="nav__portfolio">Portfolio</a>
+    <a href="/diagnostic" class="nav__cta">Diagnostic offert</a>
+  </div>
+
+  <button class="nav__toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main>
+  <!-- ================= EN-TÊTE ET PARCOURS ================= -->
+  <header class="intro">
+    <div class="wrap">
+      <span class="eyebrow">Offres et tarifs</span>
+      <h1 class="intro__title">Parler de vos engagements, sans en dire trop.</h1>
+      <p class="lead">Tout commence par un diagnostic offert de votre site. Selon ce qu'il révèle, vous choisissez ensuite d'apprendre à corriger vous-même, ou de me confier la vérification de votre communication.</p>
+
+      <ol class="path" aria-label="Le parcours en trois étapes">
+        <li>
+          <span class="path__num" aria-hidden="true">1</span>
+          <h3>Diagnostic offert</h3>
+          <p>Vous découvrez ce qui pose question sur votre site.</p>
+        </li>
+        <li>
+          <span class="path__num" aria-hidden="true">2</span>
+          <h3>Atelier ou audit</h3>
+          <p>Vous apprenez à corriger vous-même, ou je corrige pour vous.</p>
+        </li>
+        <li>
+          <span class="path__num" aria-hidden="true">3</span>
+          <h3>Suivi, si besoin</h3>
+          <p>Un accompagnement mensuel, ou votre communication prise en charge.</p>
+        </li>
+      </ol>
+      <div class="intro__cta"><a class="btn btn--primary" href="/diagnostic">Commencer par le diagnostic offert</a></div>
+    </div>
+  </header>
+
+  <!-- ================= QUELLE OFFRE POUR VOUS ================= -->
+  <section class="band" aria-labelledby="pick-title">
+    <div class="wrap">
+      <span class="eyebrow">Quelle offre pour vous&nbsp;?</span>
+      <h2 class="h2" id="pick-title">Partez de votre situation</h2>
+      <div class="pick">
+        <div class="pick__card">
+          <p class="pick__q">« Je préfère apprendre à le faire moi-même. »</p>
+          <p>Vous rédigez vos contenus et voulez savoir ce que vous pouvez dire, et ce que vous devez prouver. L'atelier vous donne la méthode et les outils pour vérifier seul(e) chaque publication.</p>
+          <a href="#atelier">Voir l'atelier</a>
+        </div>
+        <div class="pick__card">
+          <p class="pick__q">« Je veux qu'on vérifie et qu'on corrige pour moi. »</p>
+          <p>Vous manquez de temps, ou vous voulez la certitude d'un regard expert. L'audit passe vos supports au crible et vous livre des reformulations prêtes à publier.</p>
+          <a href="#audit">Voir les formules d'audit</a>
+        </div>
+        <div class="pick__card">
+          <p class="pick__q">« Un client, un appel d'offres ou un label me demande des preuves. »</p>
+          <p>Il ne suffit plus de bien formuler&nbsp;: il faut pouvoir justifier chaque engagement. La formule Preuves &amp; label vous livre un dossier de preuves prêt à joindre.</p>
+          <a href="#audit">Voir Preuves &amp; label</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ATELIER ================= -->
+  <section class="band band--cream" id="atelier" aria-labelledby="atelier-title">
+    <div class="wrap offer">
+      <div class="offer__body">
+        <span class="eyebrow">Apprendre la méthode</span>
+        <h2 class="h2" id="atelier-title">Atelier « Communiquer juste, sans greenwashing »</h2>
+        <p>Deux heures en visio, en petit groupe, pour connaître les règles essentielles (ADEME, ARPP, loi Climat et Résilience), illustrées par de vraies décisions du Jury de Déontologie Publicitaire.</p>
+        <p>Dans la seconde partie, chacun applique la grille à une phrase de son propre site, avec mes retours. Vous préférez ne pas la montrer au groupe&nbsp;? Vous pouvez travailler en privé et me l'envoyer directement.</p>
+        <ul class="facts">
+          <li>2&nbsp;heures en visio, 6 à 8 participants, une session par mois</li>
+          <li>Un kit à garder&nbsp;: la grille d'auto-évaluation simplifiée, le guide «&nbsp;ce que vous pouvez dire, ce que vous devez prouver&nbsp;» et une checklist avant publication</li>
+          <li>L'atelier porte sur la formulation de vos messages. Pour réunir les preuves exigées par un client ou un appel d'offres, voyez plutôt la formule <a href="#audit" style="text-decoration:underline">Preuves &amp; label</a>.</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>Tarif</h3>
+        <p class="price">89&nbsp;€ <small>par participant</small></p>
+        <p class="price" style="font-size:1.5rem;margin-top:0.4rem">49&nbsp;€ <small>pour les associations</small></p>
+        <p class="note">TVA non applicable, article 293&nbsp;B du CGI.</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="https://calendly.com/anais-manchin-greenphenix/30min?a1=2&amp;utm_source=site&amp;utm_medium=offres&amp;utm_campaign=atelier" target="_blank" rel="noopener">Réserver un appel découverte</a>
+        </div>
+        <p class="note">Nous fixons ensemble la date de votre session.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= AUDIT ================= -->
+  <section class="band" id="audit" aria-labelledby="audit-title">
+    <div class="wrap">
+      <span class="eyebrow">Offre phare</span>
+      <h2 class="h2" id="audit-title">Audit de communication RSE</h2>
+      <p class="lead">Vos messages vérifiés un à un, avec une grille fondée sur les ressources de l'ADEME, la Recommandation Développement durable de l'ARPP et les décisions du Jury de Déontologie Publicitaire. Chaque formule comprend un rapport, des reformulations prêtes à publier et une restitution d'une heure.</p>
+
+      <div class="table-wrap">
+        <table>
+          <caption>Les trois formules, au tarif Clients fondateurs</caption>
+          <thead>
+            <tr>
+              <th scope="col"><span class="sr-only">Contenu</span></th>
+              <th scope="col">Essentiel</th>
+              <th scope="col">Complet</th>
+              <th scope="col" class="col-hl"><span class="tag">Labels, appels d'offres</span>Preuves &amp; label</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Pour qui</th>
+              <td>Vous voulez sécuriser votre vitrine en ligne</td>
+              <td>Vous communiquez sur plusieurs supports</td>
+              <td class="col-hl">Vous devez justifier vos engagements auprès d'un client, d'un financeur ou d'un label</td>
+            </tr>
+            <tr>
+              <th scope="row">Supports analysés</th>
+              <td>Site et LinkedIn, jusqu'à 10 pages</td>
+              <td>Tous vos supports (site, réseaux, newsletter, plaquettes, rapport…)</td>
+              <td class="col-hl">Tous vos supports</td>
+            </tr>
+            <tr>
+              <th scope="row">Entretien avec votre équipe</th>
+              <td class="no">—</td>
+              <td class="yes">Inclus</td>
+              <td class="col-hl yes">Inclus</td>
+            </tr>
+            <tr>
+              <th scope="row">Grille notée et reformulations</th>
+              <td class="yes">Remises</td>
+              <td class="yes">Remises</td>
+              <td class="col-hl yes">Remises</td>
+            </tr>
+            <tr>
+              <th scope="row">Vérification des preuves</th>
+              <td class="no">—</td>
+              <td class="no">—</td>
+              <td class="col-hl yes">Chaque engagement confronté à ses justificatifs</td>
+            </tr>
+            <tr>
+              <th scope="row">Cohérence avec votre label ou votre raison d'être</th>
+              <td class="no">—</td>
+              <td class="no">—</td>
+              <td class="col-hl yes">Incluse</td>
+            </tr>
+            <tr>
+              <th scope="row">Dossier de preuves</th>
+              <td class="no">—</td>
+              <td class="no">—</td>
+              <td class="col-hl yes">Prêt à joindre à un appel d'offres ou à une demande client</td>
+            </tr>
+            <tr>
+              <th scope="row">Restitution</th>
+              <td>1&nbsp;heure en visio</td>
+              <td>1&nbsp;heure en visio</td>
+              <td class="col-hl">1&nbsp;heure en visio</td>
+            </tr>
+            <tr>
+              <th scope="row">Tarif</th>
+              <td><span class="t-price"><s><span class="sr-only">au lieu de </span>350&nbsp;€</s>250&nbsp;€</span></td>
+              <td><span class="t-price"><s><span class="sr-only">au lieu de </span>590&nbsp;€</s>410&nbsp;€</span></td>
+              <td class="col-hl"><span class="t-price"><s><span class="sr-only">au lieu de </span>790&nbsp;€</s>550&nbsp;€</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note"><strong>Tarif Clients fondateurs&nbsp;:</strong> −30&nbsp;% pour les 10 premières entreprises, jusqu'au 31&nbsp;janvier 2027. TVA non applicable, article 293&nbsp;B du CGI.</p>
+
+      <h3 class="h2" style="font-size:1.45rem;margin-top:3rem">À quoi ressemble un audit&nbsp;?</h3>
+      <p class="lead">Un extrait du format de rapport, sur une phrase inventée pour l'exemple. Chaque formulation relevée suit le même schéma.</p>
+      <div class="sample" role="group" aria-label="Exemple d'une ligne d'audit">
+        <div class="sample__head"><span><strong>Exemple illustratif</strong> · phrase fictive</span><span>Axe&nbsp;: allégations environnementales</span></div>
+        <dl>
+          <dt>Formulation relevée</dt>
+          <dd><q>Des produits respectueux de l'environnement, pour une planète plus verte.</q> (page d'accueil)</dd>
+          <dt>Constat</dt>
+          <dd><span class="score">Non conforme</span> Allégation générale, sans précision ni preuve. Le terme «&nbsp;respectueux de l'environnement&nbsp;» est interdit sur un produit ou un emballage (article L.&nbsp;541-9-1 du Code de la consommation), et l'ARPP demande qu'une allégation soit précise, proportionnée et vérifiable.</dd>
+          <dt>Ce qu'il faut prouver</dt>
+          <dd>L'action réelle qui se cache derrière la promesse&nbsp;: un pourcentage de matière recyclée, une certification, une réduction mesurée.</dd>
+          <dt>Reformulation proposée</dt>
+          <dd><q>Nos emballages sont composés à 80&nbsp;% de carton recyclé, certifié FSC Recyclé.</q></dd>
+          <dt>Priorité</dt>
+          <dd>Haute&nbsp;: page la plus visitée, risque de signalement.</dd>
+        </dl>
+      </div>
+
+      <div class="actions">
+        <a class="btn btn--primary" href="/diagnostic">Commencer par le diagnostic offert</a>
+        <a class="btn btn--secondary" href="https://calendly.com/anais-manchin-greenphenix/30min?a1=3&amp;utm_source=site&amp;utm_medium=offres&amp;utm_campaign=audit" target="_blank" rel="noopener">Réserver un appel découverte</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= APRÈS : ACCOMPAGNEMENT ET COMMUNITY MANAGEMENT ================= -->
+  <section class="band band--cream" id="accompagnement" aria-labelledby="after-title">
+    <div class="wrap">
+      <span class="eyebrow">Dans la durée</span>
+      <h2 class="h2" id="after-title">Garder le cap, mois après mois</h2>
+      <p class="lead">Une fois votre communication remise d'aplomb, deux façons de continuer. Vous pouvez aussi vous arrêter là&nbsp;: l'audit et l'atelier sont pensés pour vous rendre autonome.</p>
+
+      <div class="offer" style="margin-top:2.25rem">
+        <div class="box">
+          <h3>Accompagnement mensuel</h3>
+          <p>Vous publiez, je vous accompagne. Pour garder les bons réflexes et faire relire vos contenus sensibles avant publication.</p>
+          <ul class="facts">
+            <li>Un point mensuel en visio</li>
+            <li>Relecture de vos contenus avec la grille, avant publication</li>
+            <li>Mise à jour de vos messages clés au fil de vos nouvelles actions</li>
+          </ul>
+          <p class="price" style="margin-top:1.25rem">300&nbsp;€ <small>par mois, sans engagement</small></p>
+        </div>
+
+        <div class="box" id="community-management">
+          <h3>Community management pour structures engagées</h3>
+          <p>Je m'occupe de votre communication à votre place. C'est une offre sur mesure, construite selon les besoins et les ressources de chaque organisation.</p>
+          <ul class="facts">
+            <li>Selon vos besoins&nbsp;: posts LinkedIn ou Instagram, visuels, newsletter, reporting</li>
+            <li>Chaque contenu vérifié avec la grille avant publication</li>
+            <li>Un premier temps de cadrage&nbsp;: vos messages et votre ligne éditoriale</li>
+          </ul>
+          <p class="price" style="margin-top:1.25rem">dès 250&nbsp;€ <small>par mois</small></p>
+          <p class="note">Engagement de 3 mois minimum.</p>
+        </div>
+      </div>
+
+      <div class="actions" style="justify-content:center">
+        <a class="btn btn--primary" href="https://calendly.com/anais-manchin-greenphenix/30min?a1=4&amp;utm_source=site&amp;utm_medium=offres&amp;utm_campaign=suivi" target="_blank" rel="noopener">En parler lors d'un appel découverte</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="band band--cream" aria-labelledby="faq-title">
+    <div class="wrap">
+      <span class="eyebrow">Questions fréquentes</span>
+      <h2 class="h2" id="faq-title">Avant de vous décider</h2>
+      <div class="faq">
+        <details>
+          <summary>Pourquoi commencer par le diagnostic offert&nbsp;?</summary>
+          <p>Parce qu'il vous montre, sur votre propre site, ce qui pose question. Vous savez ensuite si un atelier suffit, ou si un audit est utile. Il ne vous engage à rien.</p>
+        </details>
+        <details>
+          <summary>Atelier ou audit&nbsp;: comment choisir&nbsp;?</summary>
+          <p>L'atelier vous apprend la méthode pour vérifier vous-même vos contenus. L'audit, c'est moi qui vérifie l'ensemble de vos supports et qui vous livre les reformulations. Si vous rédigez vous-même et avez peu de contenus, l'atelier suffit souvent. Si vous manquez de temps ou communiquez sur de nombreux supports, l'audit est plus adapté.</p>
+        </details>
+        <details>
+          <summary>Qu'est-ce que le dossier de preuves&nbsp;?</summary>
+          <p>Un document qui reprend chacun de vos engagements affichés, la formulation validée et le justificatif qui l'appuie (chiffre, certificat, source). Il est prêt à joindre à une réponse d'appel d'offres, à une demande d'un client ou à un dossier de label.</p>
+        </details>
+        <details>
+          <summary>Est-ce un avis juridique&nbsp;?</summary>
+          <p>Non. L'audit s'appuie sur les règles et recommandations en vigueur (ADEME, ARPP, Code de la consommation) et sur les décisions du Jury de Déontologie Publicitaire. Il réduit fortement le risque, mais ne remplace pas l'avis d'un avocat en cas de litige.</p>
+        </details>
+        <details>
+          <summary>Mes prestations peuvent-elles être financées (OPCO, aides)&nbsp;?</summary>
+          <p>Pas pour le moment&nbsp;: Green Phénix n'est pas un organisme de formation certifié, mes prestations ne sont donc pas prises en charge par les OPCO. C'est pourquoi l'atelier existe à un tarif accessible, avec un tarif réduit pour les associations.</p>
+        </details>
+        <details>
+          <summary>Y a-t-il un engagement de durée&nbsp;?</summary>
+          <p>Non pour le diagnostic, l'atelier, l'audit et l'accompagnement mensuel. Le community management demande trois mois minimum, le temps de construire votre ligne éditoriale et d'en voir les premiers effets.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= APPEL FINAL ================= -->
+  <section class="final" aria-labelledby="final-title">
+    <h2 class="h2" id="final-title">Commencez par votre site</h2>
+    <p>Neuf questions, trois minutes, et sous 48&nbsp;heures ouvrées les formulations qui méritent votre attention.</p>
+    <div class="actions">
+      <a class="btn btn--primary" href="/diagnostic">Faire le diagnostic offert</a>
+      <a class="btn btn--secondary" href="https://calendly.com/anais-manchin-greenphenix/30min?utm_source=site&amp;utm_medium=offres&amp;utm_campaign=final" target="_blank" rel="noopener">Réserver un appel découverte</a>
+    </div>
+  </section>
+</main>
+
+<section class="contact" id="contact">
+  <div class="contact__inner">
+    <h2 class="contact__title">Parlons de votre communication</h2>
+    <p class="contact__subtitle">Réservons 30 minutes pour un appel découverte, sans engagement.</p>
+
+    <a href="https://calendly.com/anais-manchin-greenphenix/30min" class="contact__cta" target="_blank" rel="noopener">Réserver un appel découverte →</a>
+    <p class="contact__alt"><a href="/diagnostic">ou commencer par le diagnostic offert de votre site</a></p>
+
+    <div class="contact__social">
+      <a href="https://www.linkedin.com/in/ana%C3%AFs-manchin" class="contact__social-link" aria-label="Green Phénix sur LinkedIn" target="_blank" rel="noopener">
+        <img src="images/social-icon-linkedin.png" alt="">
+      </a>
+      <a href="https://www.instagram.com/greenphenix_" class="contact__social-link" aria-label="Green Phénix sur Instagram" target="_blank" rel="noopener">
+        <img src="images/social-icon-instagram.png" alt="">
+      </a>
+    </div>
+
+    <div class="contact__newsletter">
+      <span class="contact__newsletter-label">Newsletter</span>
+      <p class="contact__newsletter-text">Une fois par mois, un décryptage RSE concret et non culpabilisant, directement dans votre boîte mail.</p>
+      <form class="contact__newsletter-form" action="https://695a71ee.sibforms.com/serve/MUIFAMI01FJqYUnjaL6LnLABpNjFQWf_sikIzWC7c40HrPjZ0gSJpPFZtRW50SIOlvUpXfLI5WRILJsmuldqeVNvvMZ9VibvPoobIJs_AG7nClXc4z9U6z9b64svbETpafNgivSL4jX_j1EOZk9EvOOhx1mzLxGhMogh_2A2-vFLW_t-eoClIDuNxUMAJUOemNIrKJNLuHyRSL5D4A==" method="post" target="_blank">
+        <input type="text" name="PRENOM" class="contact__newsletter-input contact__newsletter-input--prenom" placeholder="Votre prénom" aria-label="Votre prénom" required>
+        <input type="email" name="EMAIL" class="contact__newsletter-input" placeholder="Votre email" aria-label="Votre email" required>
+        <button type="submit" class="contact__newsletter-submit">S'inscrire</button>
+        <input type="text" name="email_address_check" value="" style="display:none" tabindex="-1" autocomplete="off">
+        <input type="hidden" name="locale" value="fr">
+      </form>
+    </div>
+
+    <a href="https://greenphenix.fr/portfolio/anaismanchin" class="contact__portfolio">Voir mon portfolio →</a>
+
+    <p class="contact__footer">
+      © Green Phénix — Anaïs Manchin — <a href="mentions-legales.html">Mentions légales</a> — <a href="politique-confidentialite.html">Politique de confidentialité</a>
+    </p>
+  </div>
+</section>
+
+<script>
+  (function () {
+    var nav = document.getElementById('siteNav');
+    var toggle = document.getElementById('navToggle');
+    if (!nav || !toggle) return;
+
+    toggle.addEventListener('click', function () {
+      var isOpen = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    nav.querySelectorAll('.nav__link, .nav__cta, .nav__portfolio').forEach(function (link) {
+      link.addEventListener('click', function () {
+        nav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  })();
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diagnostic express offert — Green Phénix</title>
+<meta name="description" content="Neuf questions, trois minutes : recevez une première impression immédiate, puis sous 48 heures ouvrées l'analyse de vos formulations par Green Phénix. Offert et sans engagement.">
+<link rel="canonical" href="https://greenphenix.fr/diagnostic">
+
+<link rel="icon" href="images/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="images/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Green Phénix">
+<meta property="og:title" content="Diagnostic express offert — Green Phénix">
+<meta property="og:description" content="Vos engagements sont réels. Vos phrases le prouvent-elles ? Neuf questions, trois minutes, une analyse sous 48 heures ouvrées.">
+<meta property="og:image" content="https://greenphenix.fr/images/og-image.jpg">
+<meta property="og:url" content="https://greenphenix.fr/diagnostic">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,900;1,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #cbb5e2;
+    --secondary: #f8f5f0;
+    --accent: #1e3d32;
+    --white: #ffffff;
+    --text: #111111;
+    --muted: #4a4a4a;
+    --line: rgba(30, 61, 50, 0.14);
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'Work Sans', -apple-system, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--font-body); color: var(--text); background: var(--white); line-height: 1.55; }
+  a { color: inherit; text-decoration: none; }
+  :focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
+
+  /* ---------- MENU ---------- */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.9rem 1.75rem;
+    background: rgba(248, 245, 240, 0.82);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(30, 61, 50, 0.08);
+  }
+
+  .nav__logo {
+    display: flex;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  .nav__logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .nav__links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .nav__link {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--accent);
+  }
+
+  .nav__cta {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    background: var(--accent);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.88rem;
+    border-radius: 100px;
+    transition: transform 0.15s ease;
+  }
+
+  .nav__cta:hover,
+  .nav__cta:focus-visible {
+    transform: translateY(-2px);
+  }
+
+  .nav__portfolio {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    background: var(--primary);
+    color: var(--accent);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.88rem;
+    border-radius: 100px;
+    transition: transform 0.15s ease;
+  }
+
+  .nav__portfolio:hover,
+  .nav__portfolio:focus-visible {
+    transform: translateY(-2px);
+  }
+
+  .nav__toggle {
+    display: none;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .nav__toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--accent);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .nav.is-open .nav__toggle span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .nav.is-open .nav__toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav.is-open .nav__toggle span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  @media (max-width: 720px) {
+    .nav__toggle {
+      display: flex;
+    }
+
+    .nav__links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.25rem;
+      background: var(--secondary);
+      padding: 0.5rem 1.75rem 1.5rem;
+      border-bottom: 1px solid rgba(30, 61, 50, 0.08);
+      display: none;
+    }
+
+    .nav.is-open .nav__links {
+      display: flex;
+    }
+
+    .nav__link {
+      width: 100%;
+      padding: 0.75rem 0;
+    }
+
+    .nav__cta,
+    .nav__portfolio {
+      margin-top: 0.5rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .nav__cta, .nav__portfolio, .nav__toggle span { transition: none; }
+  }
+
+  /* ---------- EN-TÊTE ---------- */
+  .intro { background: var(--secondary); padding: 4.5rem 1.5rem 3.5rem; }
+  .intro__inner { max-width: 760px; margin: 0 auto; }
+  .eyebrow {
+    display: inline-block; padding: 0.35rem 0.9rem; border-radius: 100px;
+    background: var(--primary); color: var(--accent);
+    font-weight: 600; font-size: 0.8rem; letter-spacing: 0.04em; text-transform: uppercase;
+  }
+  .intro__title {
+    font-family: var(--font-display); font-weight: 900; color: var(--accent);
+    font-size: clamp(2rem, 5vw, 3rem); line-height: 1.12; margin: 1.1rem 0 1.2rem;
+  }
+  .intro__lead { font-size: 1.1rem; max-width: 640px; }
+
+  .steps {
+    list-style: none; counter-reset: step;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2.5rem;
+  }
+  .steps li {
+    counter-increment: step; background: var(--white); border-radius: 14px;
+    padding: 1.25rem 1.2rem; border: 1px solid var(--line); font-size: 0.95rem;
+  }
+  .steps li::before {
+    content: counter(step); display: inline-flex; align-items: center; justify-content: center;
+    width: 1.9rem; height: 1.9rem; border-radius: 50%;
+    background: var(--accent); color: var(--white); font-weight: 600; font-size: 0.9rem; margin-bottom: 0.7rem;
+  }
+  .steps strong { display: block; color: var(--accent); margin-bottom: 0.25rem; }
+  @media (max-width: 720px) { .steps { grid-template-columns: 1fr; } }
+
+  /* ---------- FORMULAIRE ---------- */
+  .form-wrap { max-width: 760px; margin: 0 auto; padding: 3.5rem 1.5rem 2rem; scroll-margin-top: 70px; }
+  .result { scroll-margin-top: 70px; }
+  .section-title { font-family: var(--font-display); font-weight: 900; color: var(--accent); font-size: 1.6rem; margin-bottom: 0.4rem; }
+  .section-sub { color: var(--muted); margin-bottom: 2rem; }
+
+  .group { border: none; margin-bottom: 1.9rem; }
+  .group legend, .field label.field__label {
+    display: block; font-weight: 600; color: var(--accent); margin-bottom: 0.65rem; font-size: 1rem;
+  }
+  .group legend .num { color: var(--muted); font-weight: 500; margin-right: 0.35rem; }
+
+  .fields { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.25rem; margin-bottom: 2.5rem; }
+  .field--full { grid-column: 1 / -1; }
+  @media (max-width: 600px) { .fields { grid-template-columns: 1fr; } }
+  .req { color: #9b1c1c; font-weight: 600; }
+  .after-send { font-size: 0.92rem; color: var(--accent); background: var(--secondary); border-radius: 10px; padding: 0.8rem 1rem; margin: 0.25rem 0 1.25rem; }
+  input[aria-invalid="true"] { border-color: #9b1c1c; }
+  .field__hint { font-weight: 400; color: var(--muted); font-size: 0.88rem; }
+  input[type="text"], input[type="email"], input[type="url"], textarea {
+    width: 100%; font: inherit; font-size: 1rem; padding: 0.75rem 0.9rem;
+    border: 1.5px solid var(--line); border-radius: 10px; background: var(--white); color: var(--text);
+  }
+  textarea { min-height: 96px; resize: vertical; }
+  input:focus, textarea:focus { border-color: var(--accent); outline: none; }
+
+  .choices { display: flex; flex-wrap: wrap; gap: 0.55rem; }
+  .choice { position: relative; max-width: 100%; }
+  .choice input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .choice span {
+    display: inline-block; padding: 0.55rem 1rem; border-radius: 100px;
+    border: 1.5px solid var(--line); background: var(--white); cursor: pointer; font-size: 0.95rem;
+    transition: background 0.12s ease, border-color 0.12s ease;
+  }
+  .choice input:checked + span { background: var(--accent); border-color: var(--accent); color: var(--white); }
+  .choice input:focus-visible + span { outline: 3px solid var(--primary); outline-offset: 2px; }
+  .choice span:hover { border-color: var(--accent); }
+
+  .consent { display: flex; gap: 0.7rem; align-items: flex-start; font-size: 0.9rem; color: var(--muted); margin: 0.5rem 0 1.75rem; }
+  .consent input { width: 1.15rem; height: 1.15rem; margin-top: 0.2rem; accent-color: var(--accent); flex-shrink: 0; }
+  .consent a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+
+  .btn {
+    display: inline-block; padding: 0.95rem 1.9rem; border-radius: 100px; border: 2px solid var(--accent);
+    font: inherit; font-weight: 600; font-size: 1rem; cursor: pointer; text-align: center;
+    transition: transform 0.15s ease;
+  }
+  .btn:hover, .btn:focus-visible { transform: translateY(-2px); }
+  .btn--primary { background: var(--accent); color: var(--white); }
+  .btn--secondary { background: transparent; color: var(--accent); }
+  .btn[disabled] { opacity: 0.6; cursor: wait; transform: none; }
+  .form-error { color: #9b1c1c; font-weight: 500; margin-bottom: 1rem; }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+
+  /* ---------- ÉTAPES ---------- */
+  .progress { height: 6px; background: var(--secondary); border-radius: 100px; overflow: hidden; }
+  .progress__bar { height: 100%; width: 25%; background: var(--accent); border-radius: 100px; transition: width 0.25s ease; }
+  .progress__label { font-size: 0.88rem; color: var(--muted); margin: 0.6rem 0 1.75rem; }
+  .step[hidden] { display: none; }
+  .step__title { font-family: var(--font-display); font-weight: 900; color: var(--accent); font-size: 1.35rem; margin-bottom: 0.25rem; }
+  .step__title:focus { outline: none; }
+  .step__sub { color: var(--muted); margin-bottom: 1.6rem; }
+  .nav-btns { display: flex; justify-content: space-between; gap: 0.8rem; flex-wrap: wrap; margin-top: 0.5rem; }
+  .nav-btns > :only-child { margin-left: auto; }
+  @media (prefers-reduced-motion: reduce) { .progress__bar { transition: none; } }
+
+  /* ---------- RÉSULTAT ---------- */
+  .result { max-width: 760px; margin: 0 auto; padding: 3.5rem 1.5rem 2rem; }
+  .result[hidden] { display: none; }
+  .result__card { background: var(--secondary); border-radius: 18px; padding: 2rem 1.75rem; }
+  .result__title { font-family: var(--font-display); font-weight: 900; color: var(--accent); font-size: 1.7rem; margin-bottom: 0.8rem; }
+  .points { list-style: none; margin: 1.5rem 0; display: grid; gap: 0.9rem; }
+  .points li { background: var(--white); border-left: 4px solid var(--primary); border-radius: 8px; padding: 1rem 1.1rem; }
+  .points strong { color: var(--accent); display: block; margin-bottom: 0.2rem; }
+  .result__next { margin: 1.25rem 0 1.5rem; }
+  .actions { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+
+  /* ---------- CADRE ---------- */
+  .scope { max-width: 760px; margin: 0 auto; padding: 1rem 1.5rem 4rem; color: var(--muted); font-size: 0.92rem; }
+  .scope h2 { font-family: var(--font-display); color: var(--accent); font-size: 1.15rem; margin-bottom: 0.5rem; }
+
+
+  @media (prefers-reduced-motion: reduce) { .btn, .choice span { transition: none; } }
+  /* ---------- SECTION 8 : CONTACT / PIED DE PAGE ---------- */
+  .contact {
+    padding: 6rem 1.5rem 3rem;
+    background: var(--accent);
+    text-align: center;
+  }
+
+  .contact__inner {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .contact__title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+    color: var(--white);
+    margin-bottom: 1rem;
+    text-wrap: balance;
+  }
+
+  .contact__subtitle {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 1.02rem;
+    color: var(--secondary);
+    margin-bottom: 2.25rem;
+    text-wrap: pretty;
+  }
+
+  .contact__cta {
+    display: inline-block;
+    padding: 0.95rem 2.25rem;
+    background: var(--primary);
+    color: var(--accent);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 100px;
+    transition: transform 0.15s ease;
+  }
+
+  .contact__cta:hover,
+  .contact__cta:focus-visible {
+    transform: translateY(-2px);
+  }
+
+  .contact__social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .contact__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(248, 245, 240, 0.12);
+    transition: background-color 0.2s ease;
+  }
+
+  .contact__social-link:hover,
+  .contact__social-link:focus-visible {
+    background: rgba(248, 245, 240, 0.24);
+  }
+
+  .contact__social-link img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .contact__newsletter {
+    margin-top: 2.75rem;
+    background: var(--white);
+    border-radius: 16px;
+    padding: 1.75rem 1.75rem 1.5rem;
+    text-align: left;
+  }
+
+  .contact__newsletter-label {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--primary);
+    padding: 0.35rem 0.9rem;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+  }
+
+  .contact__newsletter-text {
+    font-family: var(--font-body);
+    font-size: 0.92rem;
+    color: var(--text);
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
+
+  .contact__newsletter-form {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .contact__newsletter-input {
+    flex: 1 1 220px;
+    min-width: 0;
+    padding: 0.85rem 1.1rem;
+    border: 1px solid rgba(30, 61, 50, 0.2);
+    border-radius: 100px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--text);
+    background: var(--white);
+  }
+
+  .contact__newsletter-input:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .contact__newsletter-input--prenom {
+    flex-basis: 150px;
+  }
+
+  .contact__newsletter-submit {
+    padding: 0.85rem 1.75rem;
+    background: var(--accent);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+  }
+
+  .contact__newsletter-submit:hover,
+  .contact__newsletter-submit:focus-visible {
+    transform: translateY(-2px);
+  }
+
+  .contact__portfolio {
+    display: inline-block;
+    margin-top: 2.25rem;
+    padding: 0.8rem 1.75rem;
+    border: 1.5px solid rgba(248, 245, 240, 0.55);
+    color: var(--secondary);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 100px;
+    transition: transform 0.15s ease, background-color 0.2s ease;
+  }
+
+  .contact__portfolio:hover,
+  .contact__portfolio:focus-visible {
+    background: rgba(248, 245, 240, 0.14);
+    transform: translateY(-2px);
+  }
+
+  .contact__footer {
+    margin-top: 2.75rem;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    color: rgba(248, 245, 240, 0.75);
+  }
+
+  .contact__footer a {
+    color: rgba(248, 245, 240, 0.9);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .contact__footer a:hover,
+  .contact__footer a:focus-visible {
+    color: var(--white);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .contact__cta, .contact__portfolio, .contact__newsletter-submit { transition: none; }
+  }
+
+  @media (max-width: 600px) {
+    .contact { padding: 4.5rem 1.25rem 2.5rem; }
+    .contact__newsletter { padding: 1.5rem 1.25rem 1.25rem; }
+    .contact__newsletter-form { flex-direction: column; }
+    .contact__newsletter-input { flex-basis: auto; width: 100%; }
+    .contact__newsletter-submit { width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="siteNav">
+  <a href="/" class="nav__logo" aria-label="Green Phénix — accueil">
+    <img src="images/logo-icon-160.png" alt="Green Phénix">
+  </a>
+
+  <div class="nav__links">
+    <a href="/" class="nav__link">Accueil</a>
+    <a href="/offres" class="nav__link">Offres</a>
+    <a href="/#qui-suis-je" class="nav__link">Qui suis-je</a>
+    <a href="#contact" class="nav__link">Contact</a>
+    <a href="https://greenphenix.fr/portfolio/anaismanchin" class="nav__portfolio">Portfolio</a>
+    <a href="/diagnostic" class="nav__cta">Diagnostic offert</a>
+  </div>
+
+  <button class="nav__toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main>
+  <header class="intro">
+    <div class="intro__inner">
+      <span class="eyebrow">Diagnostic express offert</span>
+      <h1 class="intro__title">Vos engagements sont réels. Vos phrases le&nbsp;prouvent-elles&nbsp;?</h1>
+      <p class="intro__lead">Répondez à neuf questions, en trois minutes environ. Vous obtenez tout de suite une première impression, puis mon regard sur les formulations de votre site.</p>
+      <ol class="steps">
+        <li><strong>Vous répondez</strong>Neuf questions en trois étapes, puis vos coordonnées et l'adresse de votre site.</li>
+        <li><strong>Première impression</strong>Deux ou trois points de vigilance s'affichent dès l'envoi, et vous les recevez par e-mail.</li>
+        <li><strong>Mon analyse sous 48&nbsp;h ouvrées</strong>Deux ou trois formulations relevées sur vos pages, chacune avec la règle qui s'y applique.</li>
+      </ol>
+    </div>
+  </header>
+
+  <section class="form-wrap" id="formulaire" aria-labelledby="form-title">
+    <h2 class="section-title" id="form-title">Votre demande</h2>
+    <p class="section-sub">Quatre étapes courtes. Tous les champs sont obligatoires, sauf mention contraire.</p>
+
+    <form id="diagForm" novalidate>
+      <div class="progress" aria-hidden="true"><div class="progress__bar" id="progressBar"></div></div>
+      <p class="progress__label" id="progressLabel" aria-live="polite">Étape 1 sur 4 · Votre structure</p>
+
+    <div class="step" data-step="1">
+      <h3 class="step__title" tabindex="-1">Votre structure</h3>
+      <p class="step__sub">Pour comprendre qui vous êtes et ce que vous préparez.</p>
+      <fieldset class="group">
+        <legend><span class="num">1.</span>Combien de personnes compte votre structure&nbsp;?</legend>
+        <div class="choices" data-q="Taille">
+          <label class="choice"><input type="radio" name="q1" value="1 à 5"><span>1 à 5</span></label>
+          <label class="choice"><input type="radio" name="q1" value="6 à 20"><span>6 à 20</span></label>
+          <label class="choice"><input type="radio" name="q1" value="21 à 50"><span>21 à 50</span></label>
+          <label class="choice"><input type="radio" name="q1" value="Plus de 50"><span>Plus de 50</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="group">
+        <legend><span class="num">2.</span>Qui produit vos contenus de communication&nbsp;?</legend>
+        <div class="choices" data-q="Production">
+          <label class="choice"><input type="radio" name="q2" value="Moi-même"><span>Moi-même</span></label>
+          <label class="choice"><input type="radio" name="q2" value="Un salarié"><span>Un salarié</span></label>
+          <label class="choice"><input type="radio" name="q2" value="Un freelance ou une agence"><span>Un freelance ou une agence</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="group">
+        <legend><span class="num">3.</span>Avez-vous un label, une certification ou le statut de société à mission&nbsp;?</legend>
+        <div class="choices" data-q="Label">
+          <label class="choice"><input type="radio" name="q3" value="Label ou certification"><span>Label ou certification</span></label>
+          <label class="choice"><input type="radio" name="q3" value="Société à mission"><span>Société à mission</span></label>
+          <label class="choice"><input type="radio" name="q3" value="Les deux"><span>Les deux</span></label>
+          <label class="choice"><input type="radio" name="q3" value="Aucun"><span>Aucun</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="group">
+        <legend><span class="num">4.</span>Qu'est-ce qui motive votre demande aujourd'hui&nbsp;?</legend>
+        <div class="choices" data-q="Motif">
+          <label class="choice"><input type="radio" name="q4" value="Je prépare un nouveau site ou une refonte"><span>Je prépare un nouveau site ou une refonte</span></label>
+          <label class="choice"><input type="radio" name="q4" value="Je veux valoriser un label ou une certification"><span>Je veux valoriser un label ou une certification</span></label>
+          <label class="choice"><input type="radio" name="q4" value="Je prépare un rapport ou un bilan RSE"><span>Je prépare un rapport ou un bilan RSE</span></label>
+          <label class="choice"><input type="radio" name="q4" value="Un client ou un partenaire me demande des preuves"><span>Un client ou un partenaire me demande des preuves</span></label>
+          <label class="choice"><input type="radio" name="q4" value="Je veux vérifier ma communication actuelle"><span>Je veux vérifier ma communication actuelle</span></label>
+        </div>
+      </fieldset>
+
+      <p class="form-error" role="alert" hidden></p>
+      <div class="nav-btns">
+        
+        <button type="button" class="btn btn--primary" data-next>Suivant →</button>
+      </div>
+    </div>
+    <div class="step" data-step="2" hidden>
+      <h3 class="step__title" tabindex="-1">Votre communication</h3>
+      <p class="step__sub">Votre façon de parler de vos engagements aujourd'hui.</p>
+      <fieldset class="group">
+        <legend><span class="num">5.</span>Communiquez-vous sur vos engagements environnementaux ou sociaux&nbsp;?</legend>
+        <div class="choices" data-q="Fréquence">
+          <label class="choice"><input type="radio" name="q5" value="Souvent"><span>Souvent</span></label>
+          <label class="choice"><input type="radio" name="q5" value="Parfois"><span>Parfois</span></label>
+          <label class="choice"><input type="radio" name="q5" value="Rarement"><span>Rarement</span></label>
+          <label class="choice"><input type="radio" name="q5" value="Jamais"><span>Jamais</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="group">
+        <legend><span class="num">6.</span>Vous est-il déjà arrivé de renoncer à communiquer sur un engagement par crainte des critiques&nbsp;?</legend>
+        <div class="choices" data-q="Renoncement">
+          <label class="choice"><input type="radio" name="q6" value="Oui, souvent"><span>Oui, souvent</span></label>
+          <label class="choice"><input type="radio" name="q6" value="Oui, parfois"><span>Oui, parfois</span></label>
+          <label class="choice"><input type="radio" name="q6" value="Non"><span>Non</span></label>
+          <label class="choice"><input type="radio" name="q6" value="Je ne me suis jamais posé la question"><span>Je ne me suis jamais posé la question</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="group">
+        <legend><span class="num">7.</span>Utilisez-vous des termes comme «&nbsp;écoresponsable&nbsp;», «&nbsp;durable&nbsp;» ou «&nbsp;respectueux de l'environnement&nbsp;»&nbsp;?</legend>
+        <div class="choices" data-q="Termes généraux">
+          <label class="choice"><input type="radio" name="q7" value="Oui"><span>Oui</span></label>
+          <label class="choice"><input type="radio" name="q7" value="Non"><span>Non</span></label>
+          <label class="choice"><input type="radio" name="q7" value="Je ne sais pas"><span>Je ne sais pas</span></label>
+        </div>
+      </fieldset>
+
+      <p class="form-error" role="alert" hidden></p>
+      <div class="nav-btns">
+        <button type="button" class="btn btn--secondary" data-prev>← Précédent</button>
+        <button type="button" class="btn btn--primary" data-next>Suivant →</button>
+      </div>
+    </div>
+    <div class="step" data-step="3" hidden>
+      <h3 class="step__title" tabindex="-1">Vos pratiques</h3>
+      <p class="step__sub">Comment vos contenus sont préparés et vérifiés.</p>
+      <fieldset class="group">
+        <legend><span class="num">8.</span>Pourriez-vous justifier par un document chaque chiffre ou engagement que vous publiez&nbsp;?</legend>
+        <div class="choices" data-q="Preuves">
+          <label class="choice"><input type="radio" name="q8" value="Oui, tous"><span>Oui, tous</span></label>
+          <label class="choice"><input type="radio" name="q8" value="Certains"><span>Certains</span></label>
+          <label class="choice"><input type="radio" name="q8" value="Non"><span>Non</span></label>
+          <label class="choice"><input type="radio" name="q8" value="Je ne sais pas"><span>Je ne sais pas</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="group">
+        <legend><span class="num">9.</span>Qui relit un contenu avant sa publication&nbsp;?</legend>
+        <div class="choices" data-q="Relecture">
+          <label class="choice"><input type="radio" name="q9" value="Personne"><span>Personne</span></label>
+          <label class="choice"><input type="radio" name="q9" value="Une personne de l'équipe"><span>Une personne de l'équipe</span></label>
+          <label class="choice"><input type="radio" name="q9" value="Plusieurs personnes"><span>Plusieurs personnes</span></label>
+        </div>
+      </fieldset>
+      <div class="field group">
+        <label class="field__label" for="doute">Une phrase ou une page vous fait-elle douter&nbsp;? <span class="field__hint">(facultatif)</span></label>
+        <textarea id="doute" maxlength="500"></textarea>
+      </div>
+      <p class="form-error" role="alert" hidden></p>
+      <div class="nav-btns">
+        <button type="button" class="btn btn--secondary" data-prev>← Précédent</button>
+        <button type="button" class="btn btn--primary" data-next>Suivant →</button>
+      </div>
+    </div>
+
+    <div class="step" data-step="4" hidden>
+      <h3 class="step__title" tabindex="-1">Vos coordonnées</h3>
+      <p class="step__sub">Pour vous envoyer votre première impression et mon analyse. Les champs marqués d'un astérisque (<span class="req">*</span>) sont obligatoires.</p>
+      <div class="fields">
+        <div class="field">
+          <label class="field__label" for="prenom">Prénom <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="prenom" required aria-required="true" autocomplete="given-name">
+        </div>
+        <div class="field">
+          <label class="field__label" for="email">Adresse e-mail <span class="req" aria-hidden="true">*</span></label>
+          <input type="email" id="email" required aria-required="true" autocomplete="email">
+        </div>
+        <div class="field">
+          <label class="field__label" for="entreprise">Structure <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="entreprise" required aria-required="true" autocomplete="organization">
+        </div>
+        <div class="field">
+          <label class="field__label" for="site">Adresse de votre site <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="site" required aria-required="true" inputmode="url" placeholder="www.votre-site.fr">
+        </div>
+        <div class="field field--full">
+          <label class="field__label" for="page2">Une autre page à analyser <span class="field__hint">(facultatif — sinon, je choisis la page la plus pertinente)</span></label>
+          <input type="text" id="page2" inputmode="url" placeholder="Page « Nos engagements », « À propos »…">
+        </div>
+      </div>
+
+      <div class="hp" aria-hidden="true">
+        <label for="website_check">Ne pas remplir</label>
+        <input type="text" id="website_check" tabindex="-1" autocomplete="off">
+      </div>
+
+      <label class="consent">
+        <input type="checkbox" id="consent" required aria-required="true">
+        <span><span class="req" aria-hidden="true">*</span> J'accepte que Green Phénix utilise ces informations pour réaliser mon diagnostic et me recontacter à ce sujet. Mes données ne sont ni cédées ni utilisées pour la newsletter sans mon accord. <a href="politique-confidentialite.html">Politique de confidentialité</a>.</span>
+      </label>
+
+      <label class="consent">
+        <input type="checkbox" id="newsletter">
+        <span>Je souhaite aussi recevoir la newsletter mensuelle de Green Phénix (facultatif, désinscription en un clic).</span>
+      </label>
+
+      <p class="after-send">Dès l'envoi, vos premiers points de vigilance s'affichent sur cette page. Vous les recevez aussi par e-mail, puis mon analyse sous 48&nbsp;heures ouvrées.</p>
+
+      <p class="form-error" role="alert" hidden></p>
+      <div class="nav-btns">
+        <button type="button" class="btn btn--secondary" data-prev>← Précédent</button>
+        <button type="submit" class="btn btn--primary" id="submitBtn">Recevoir mon diagnostic</button>
+      </div>
+    </div>
+    </form>
+  </section>
+
+  <section class="result" id="resultat" hidden aria-live="polite" tabindex="-1">
+    <div class="result__card">
+      <h2 class="result__title" id="resultTitle">Merci, votre demande est bien enregistrée.</h2>
+      <p>Voici ce que vos réponses indiquent déjà&nbsp;:</p>
+      <ul class="points" id="points"></ul>
+      <p class="result__next">Vous recevrez ces points par e-mail dans quelques minutes, puis mon analyse de vos pages <strong>sous 48&nbsp;heures ouvrées</strong>. Si vous souhaitez en parler dès maintenant, réservez un créneau&nbsp;: j'aurai préparé votre diagnostic pour notre échange.</p>
+      <div class="actions">
+        <a class="btn btn--primary" href="https://calendly.com/anais-manchin-greenphenix/30min?a1=1&amp;utm_source=diagnostic-page&amp;utm_medium=site&amp;utm_campaign=diagnostic-express" target="_blank" rel="noopener">Réserver un échange de 30 minutes</a>
+        <a class="btn btn--secondary" href="/offres">Découvrir les offres</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="scope" aria-labelledby="scope-title">
+    <h2 id="scope-title">Ce que le diagnostic est, et ce qu'il n'est pas</h2>
+    <p>Le diagnostic express est un premier regard sur vos formulations&nbsp;: votre page d'accueil et une page de votre choix. Il ne remplace ni un audit complet de votre communication, ni un avis juridique. Il est offert et ne vous engage à rien.</p>
+  </section>
+</main>
+
+<section class="contact" id="contact">
+  <div class="contact__inner">
+    <h2 class="contact__title">Parlons de votre communication</h2>
+    <p class="contact__subtitle">Réservons 30 minutes pour un appel découverte, sans engagement.</p>
+
+    <a href="https://calendly.com/anais-manchin-greenphenix/30min" class="contact__cta" target="_blank" rel="noopener">Réserver un appel découverte →</a>
+
+    <div class="contact__social">
+      <a href="https://www.linkedin.com/in/ana%C3%AFs-manchin" class="contact__social-link" aria-label="Green Phénix sur LinkedIn" target="_blank" rel="noopener">
+        <img src="images/social-icon-linkedin.png" alt="">
+      </a>
+      <a href="https://www.instagram.com/greenphenix_" class="contact__social-link" aria-label="Green Phénix sur Instagram" target="_blank" rel="noopener">
+        <img src="images/social-icon-instagram.png" alt="">
+      </a>
+    </div>
+
+    <div class="contact__newsletter">
+      <span class="contact__newsletter-label">Newsletter</span>
+      <p class="contact__newsletter-text">Une fois par mois, un décryptage RSE concret et non culpabilisant, directement dans votre boîte mail.</p>
+      <form class="contact__newsletter-form" action="https://695a71ee.sibforms.com/serve/MUIFAMI01FJqYUnjaL6LnLABpNjFQWf_sikIzWC7c40HrPjZ0gSJpPFZtRW50SIOlvUpXfLI5WRILJsmuldqeVNvvMZ9VibvPoobIJs_AG7nClXc4z9U6z9b64svbETpafNgivSL4jX_j1EOZk9EvOOhx1mzLxGhMogh_2A2-vFLW_t-eoClIDuNxUMAJUOemNIrKJNLuHyRSL5D4A==" method="post" target="_blank">
+        <input type="text" name="PRENOM" class="contact__newsletter-input contact__newsletter-input--prenom" placeholder="Votre prénom" aria-label="Votre prénom" required>
+        <input type="email" name="EMAIL" class="contact__newsletter-input" placeholder="Votre email" aria-label="Votre email" required>
+        <button type="submit" class="contact__newsletter-submit">S'inscrire</button>
+        <input type="text" name="email_address_check" value="" style="display:none" tabindex="-1" autocomplete="off">
+        <input type="hidden" name="locale" value="fr">
+      </form>
+    </div>
+
+    <a href="https://greenphenix.fr/portfolio/anaismanchin" class="contact__portfolio">Voir mon portfolio →</a>
+
+    <p class="contact__footer">
+      © Green Phénix — Anaïs Manchin — <a href="mentions-legales.html">Mentions légales</a> — <a href="politique-confidentialite.html">Politique de confidentialité</a>
+    </p>
+  </div>
+</section>
+
+<script>
+  (function () {
+    var nav = document.getElementById('siteNav');
+    var toggle = document.getElementById('navToggle');
+    if (!nav || !toggle) return;
+
+    toggle.addEventListener('click', function () {
+      var isOpen = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    nav.querySelectorAll('.nav__link, .nav__cta, .nav__portfolio').forEach(function (link) {
+      link.addEventListener('click', function () {
+        nav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  })();
+</script>
+
+
+<script>
+(function () {
+  // Adresse d'envoi du formulaire Brevo « Diagnostic express — site »
+  var BREVO_URL = "https://695a71ee.sibforms.com/serve/MUIFAKGHDrD341g1yYHfQAV5fh_DXFABUSm4r9WGA1XdrtJPhf3KimQDVLI8qxWgfL6hwMdP9RpNvXJo93VOzGx1212_EQA3WzuGo8AAaXVArsl7_zMLaim7hAXC-xgfxFzasmFGKvfA0FU8O5noaa3QOn3Mjgs18FzvQ5YvjImARuTBciK4_RgVNyoALsN7BCw8ZPa4ZCK0O84TFg==";
+
+  var form = document.getElementById("diagForm");
+  var steps = form.querySelectorAll(".step");
+  var bar = document.getElementById("progressBar");
+  var label = document.getElementById("progressLabel");
+  var current = 1;
+
+  function val(id) { return document.getElementById(id).value.trim(); }
+  function answer(n) {
+    var el = form.querySelector('input[name="q' + n + '"]:checked');
+    return el ? el.value : "";
+  }
+  function stepEl(n) { return form.querySelector('.step[data-step="' + n + '"]'); }
+
+  function show(n) {
+    stepEl(current).hidden = true;
+    current = n;
+    var s = stepEl(n);
+    s.hidden = false;
+    bar.style.width = (n * 25) + "%";
+    label.textContent = "Étape " + n + " sur 4 · " + s.querySelector(".step__title").textContent;
+    form.parentNode.scrollIntoView({ block: "start" });
+    s.querySelector(".step__title").focus({ preventScroll: true });
+  }
+
+  function setError(n, msg) {
+    var box = stepEl(n).querySelector(".form-error");
+    box.textContent = msg || "";
+    box.hidden = !msg;
+  }
+
+  // Vérifie qu'une réponse est donnée à chaque question de l'étape
+  function checkQuestions(n) {
+    var groups = stepEl(n).querySelectorAll(".choices");
+    var missing = [];
+    for (var i = 0; i < groups.length; i++) {
+      if (!groups[i].querySelector("input:checked")) {
+        missing.push(groups[i].parentNode.querySelector(".num").textContent.replace(".", ""));
+      }
+    }
+    if (missing.length) {
+      setError(n, missing.length === 1 ? "Merci de répondre à la question " + missing[0] + "." : "Merci de répondre aux questions " + missing.join(", ") + ".");
+      return false;
+    }
+    setError(n, "");
+    return true;
+  }
+
+  form.addEventListener("click", function (e) {
+    if (e.target.hasAttribute("data-next")) {
+      if (checkQuestions(current)) show(current + 1);
+    } else if (e.target.hasAttribute("data-prev")) {
+      setError(current, "");
+      show(current - 1);
+    }
+  });
+
+  // Entrée dans un champ texte : ne pas envoyer le formulaire avant la dernière étape
+  form.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" && e.target.tagName === "INPUT" && current < 4) e.preventDefault();
+  });
+
+  // Règles de la première impression : au plus trois points, par ordre d'importance
+  function vigilance(a) {
+    var p = [];
+    if (a[8] !== "Oui, tous") {
+      p.push(["Les preuves de vos engagements",
+        "Une allégation environnementale ou sociale doit pouvoir être justifiée. C'est le premier point que j'examinerai sur vos pages."]);
+    }
+    if (a[7] !== "Non") {
+      p.push(["Les termes généraux",
+        "Des mots comme « écoresponsable » ou « durable » font partie des formulations les plus encadrées. Je vérifierai comment ils sont employés."]);
+    }
+    if (a[6] === "Oui, souvent" || a[6] === "Oui, parfois") {
+      p.push(["Des actions à valoriser",
+        "Vous avez sans doute des actions à raconter. Le diagnostic vous indiquera comment en parler, preuves à l'appui, sans vous exposer."]);
+    } else if (a[5] === "Rarement" || a[5] === "Jamais") {
+      p.push(["Une communication discrète",
+        "Vous parlez peu de vos engagements. Le diagnostic repérera ce qui mérite d'être mis en avant, et la manière juste de le faire."]);
+    }
+    if (a[9] === "Personne") {
+      p.push(["La relecture avant publication",
+        "Une étape de validation, même simple, réduit fortement le risque de formulation imprécise."]);
+    }
+    if (a[3] !== "Aucun") {
+      p.push(["La présentation de votre label ou de votre statut",
+        "C'est un atout, et sa mise en avant obéit à des règles précises que je vérifierai."]);
+    }
+    if (p.length === 0) {
+      p.push(["Une communication déjà attentive",
+        "Vos réponses montrent de bonnes pratiques. Le diagnostic confirmera ce qui fonctionne et repérera les formulations à renforcer."]);
+    }
+    return p.slice(0, 3);
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (current < 4) return;
+
+    // Robot : le champ caché est rempli, rien n'est transmis
+    if (val("website_check") !== "") { return; }
+
+    var missing = [];
+    if (!val("prenom")) missing.push("votre prénom");
+    var email = val("email");
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) missing.push("une adresse e-mail valide");
+    if (!val("entreprise")) missing.push("le nom de votre structure");
+    if (!val("site")) missing.push("l'adresse de votre site");
+    if (!document.getElementById("consent").checked) missing.push("votre accord pour le traitement de vos données");
+    ["prenom", "email", "entreprise", "site"].forEach(function (id) {
+      var bad = id === "email" ? !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val(id)) : !val(id);
+      document.getElementById(id).setAttribute("aria-invalid", bad ? "true" : "false");
+    });
+    if (missing.length) { setError(4, "Il manque " + missing.join(", ") + "."); return; }
+    setError(4, "");
+
+    var a = {};
+    for (var n = 1; n <= 9; n++) a[n] = answer(n);
+    var groups = form.querySelectorAll(".choices");
+    var reponses = [];
+    for (var i = 0; i < groups.length; i++) {
+      reponses.push((i + 1) + ". " + groups[i].getAttribute("data-q") + " : " + a[i + 1]);
+    }
+    var points = vigilance(a);
+    var site = val("site") + (val("page2") ? " | Page en plus : " + val("page2") : "");
+
+    var data = new FormData();
+    data.append("EMAIL", email);
+    data.append("PRENOM", val("prenom"));
+    data.append("ENTREPRISE", val("entreprise"));
+    data.append("SITE_WEB", site);
+    data.append("REPONSES_DIAG", reponses.join(" | "));
+    data.append("DOUTE", val("doute"));
+    data.append("POINTS_VIGILANCE", points.map(function (x) { return x[0] + " : " + x[1]; }).join(" | "));
+    data.append("NEWSLETTER", document.getElementById("newsletter").checked ? "Oui" : "Non");
+    data.append("email_address_check", "");
+    data.append("locale", "fr");
+
+    var btn = document.getElementById("submitBtn");
+    btn.disabled = true;
+    btn.textContent = "Envoi en cours…";
+
+    fetch(BREVO_URL, { method: "POST", body: data, mode: "no-cors" })
+      .then(function () { showResult(points, val("prenom")); })
+      .catch(function () {
+        btn.disabled = false;
+        btn.textContent = "Recevoir mon diagnostic";
+        var box = stepEl(4).querySelector(".form-error");
+        box.innerHTML = "L'envoi n'a pas abouti. Vous pouvez réessayer, ou m'écrire à <a href=\"mailto:anais.manchin@greenphenix.fr\">anais.manchin@greenphenix.fr</a>.";
+        box.hidden = false;
+      });
+  });
+
+  function showResult(points, prenom) {
+    var list = document.getElementById("points");
+    list.innerHTML = "";
+    points.forEach(function (x) {
+      var li = document.createElement("li");
+      var s = document.createElement("strong");
+      s.textContent = x[0];
+      li.appendChild(s);
+      li.appendChild(document.createTextNode(x[1]));
+      list.appendChild(li);
+    });
+    document.getElementById("resultTitle").textContent = "Merci " + prenom + ", votre demande est bien enregistrée.";
+    document.getElementById("formulaire").hidden = true;
+    var r = document.getElementById("resultat");
+    r.hidden = false;
+    r.focus();
+    r.scrollIntoView({ block: "start" });
+  }
+})();
+</script>
+</body>
+</html>
