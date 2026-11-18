@@ -317,6 +317,10 @@
     transition: transform 0.15s ease;
   }
 
+  .hero__actions { display: flex; flex-direction: column; align-items: center; gap: 0.9rem; margin-top: 2.5rem; }
+  .hero__actions .hero__cta { margin-top: 0; }
+  .hero__cta--ghost { background: transparent; color: var(--white); box-shadow: inset 0 0 0 2px var(--white); }
+
   .hero__cta:hover,
   .hero__cta:focus-visible {
     transform: translateY(-2px);
@@ -419,6 +423,11 @@
     object-fit: cover;
     display: block;
   }
+
+  .context__cta { margin-top: 3rem; text-align: center; }
+  .context__cta p { font-family: var(--font-display); font-style: italic; font-size: 1.3rem; color: var(--accent); margin-bottom: 1rem; }
+  .context__cta-btn { display: inline-block; padding: 0.9rem 1.9rem; background: var(--accent); color: var(--white); font-weight: 600; border-radius: 100px; transition: transform 0.15s ease; }
+  .context__cta-btn:hover, .context__cta-btn:focus-visible { transform: translateY(-2px); }
 
   .context__stats {
     display: flex;
@@ -683,6 +692,58 @@
   .offer__cta:focus-visible {
     transform: translateY(-2px);
   }
+
+  .offer__link {
+    align-self: flex-start;
+    margin-top: 0.75rem;
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .offer:hover .offer__link { color: var(--secondary); }
+
+  .offer__intro {
+    font-family: var(--font-body);
+    font-size: 0.98rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+    transition: color 0.3s ease;
+  }
+  .prices {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+  }
+  .prices li {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.15rem 0.75rem;
+    padding: 0.75rem 0.9rem;
+    border-radius: 12px;
+    background: var(--secondary);
+    font-family: var(--font-body);
+    transition: background-color 0.3s ease;
+  }
+  .prices__name { font-weight: 600; color: var(--accent); }
+  .prices__amount { font-weight: 600; color: var(--accent); white-space: nowrap; }
+  .prices__amount s { font-weight: 400; opacity: 0.6; margin-right: 0.3rem; }
+  .prices__desc { grid-column: 1 / -1; font-size: 0.85rem; line-height: 1.4; color: var(--text); }
+  .offer__note {
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    line-height: 1.45;
+    margin-bottom: 1.75rem;
+    transition: color 0.3s ease;
+  }
+  .offer:hover .offer__intro, .offer:hover .offer__note { color: var(--secondary); }
+  .offer:hover .prices li { background: rgba(248, 245, 240, 0.12); }
+  .offer:hover .prices__name, .offer:hover .prices__amount, .offer:hover .prices__desc { color: var(--secondary); }
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
   @media (prefers-reduced-motion: reduce) {
     .offer, .offer__title, .offer__list li, .offer__list li::before, .offer__cta {
@@ -1013,6 +1074,9 @@
     text-align: center;
   }
 
+  .contact__alt { margin-top: 1rem; font-size: 0.95rem; }
+  .contact__alt a { color: var(--secondary); text-decoration: underline; text-underline-offset: 3px; }
+
   .contact__inner {
     max-width: 640px;
     margin: 0 auto;
@@ -1216,10 +1280,11 @@
 
   <div class="nav__links">
     <a href="#accueil" class="nav__link">Accueil</a>
-    <a href="#offres" class="nav__link">Offres</a>
+    <a href="/offres" class="nav__link">Offres</a>
     <a href="#qui-suis-je" class="nav__link">Qui suis-je</a>
+    <a href="#contact" class="nav__link">Contact</a>
     <a href="https://greenphenix.fr/portfolio/anaismanchin" class="nav__portfolio">Portfolio</a>
-    <a href="#contact" class="nav__cta">Contact</a>
+    <a href="/diagnostic" class="nav__cta">Diagnostic offert</a>
   </div>
 
   <button class="nav__toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
@@ -1238,7 +1303,10 @@
     Green Phénix accompagne les organisations engagées dans une communication RSE
     crédible, sans&nbsp;greenwashing.
   </p>
-  <a href="https://calendly.com/anais-manchin-greenphenix/30min" class="hero__cta" target="_blank" rel="noopener">Réserver un appel découverte</a>
+  <div class="hero__actions">
+    <a href="/diagnostic" class="hero__cta">Faire le diagnostic offert</a>
+    <a href="https://calendly.com/anais-manchin-greenphenix/30min" class="hero__cta hero__cta--ghost" target="_blank" rel="noopener">Réserver un appel découverte</a>
+  </div>
 </section>
 
 <!-- ================= SECTION QUOTE (phrase seule) ================= -->
@@ -1282,6 +1350,11 @@
         <span class="context__stat-number">60 %</span>
         <span class="context__stat-label">estiment que trop de marques utilisent les enjeux de société comme levier marketing</span>
       </div>
+    </div>
+
+    <div class="context__cta">
+      <p>Vos engagements sont réels. Vos phrases le prouvent-elles&nbsp;?</p>
+      <a href="/diagnostic" class="context__cta-btn">Faire le diagnostic offert →</a>
     </div>
   </div>
 </section>
@@ -1336,36 +1409,49 @@
       <div class="offer">
         <span class="offer__badge">Offre phare</span>
         <h3 class="offer__title">Audit de communication RSE</h3>
-        <ul class="offer__list">
-          <li>Analyse de votre communication actuelle avec ma grille d&#8209;audit&nbsp;: une note finale et un commentaire par critère</li>
-          <li>Grille fondée sur le Guide de la communication responsable de l'ADEME&nbsp;: les 3 piliers et les 4 règles essentielles (preuves tangibles, impacts maîtrisés, parties prenantes, engagements cohérents)</li>
-          <li>Repérage des risques de greenwashing et des écarts entre vos discours et vos actions</li>
-          <li>Restitution en direct à l'oral, avec des recommandations concrètes et priorisées</li>
+        <p class="offer__intro">Vos messages vérifiés un à un, preuves à l'appui, avec une grille fondée sur l'ADEME, l'ARPP et les décisions du Jury de Déontologie Publicitaire. Rapport, reformulations proposées et restitution d'une heure.</p>
+        <ul class="prices" aria-label="Formules et tarifs">
+          <li>
+            <span class="prices__name">Essentiel</span>
+            <span class="prices__amount"><s><span class="sr-only">au lieu de </span>350&nbsp;€</s> 250&nbsp;€</span>
+            <span class="prices__desc">Site et LinkedIn, jusqu'à 10 pages</span>
+          </li>
+          <li>
+            <span class="prices__name">Complet</span>
+            <span class="prices__amount"><s><span class="sr-only">au lieu de </span>590&nbsp;€</s> 410&nbsp;€</span>
+            <span class="prices__desc">Tous vos supports, entretien inclus</span>
+          </li>
+          <li>
+            <span class="prices__name">Preuves &amp; label</span>
+            <span class="prices__amount"><s><span class="sr-only">au lieu de </span>790&nbsp;€</s> 550&nbsp;€</span>
+            <span class="prices__desc">Formule Complet, plus la vérification de vos preuves et un dossier prêt à joindre à un appel d'offres ou à un label</span>
+          </li>
         </ul>
-        <a href="https://calendly.com/anais-manchin-greenphenix/30min" class="offer__cta" target="_blank" rel="noopener">Réserver un appel découverte →</a>
+        <p class="offer__note"><strong>Tarif Clients fondateurs&nbsp;:</strong> −30&nbsp;% pour les 10 premières entreprises, jusqu'au 31&nbsp;janvier 2027. TVA non applicable, article 293&nbsp;B du CGI.</p>
+        <a href="/diagnostic" class="offer__cta">Diagnostic express offert →</a>
+        <a href="/offres#audit" class="offer__link">En savoir plus sur les formules</a>
       </div>
 
       <div class="offer">
-        <span class="offer__badge">Programme 6 semaines</span>
-        <h3 class="offer__title">Programme Envol&nbsp;: votre communication LinkedIn en 6&nbsp;semaines</h3>
+        <span class="offer__badge">Atelier 2 heures</span>
+        <h3 class="offer__title">Atelier «&nbsp;Communiquer juste, sans greenwashing&nbsp;»</h3>
         <ul class="offer__list">
-          <li>Diagnostic de départ de votre communication (LinkedIn, site) selon les règles ADEME, avec un point de départ chiffré</li>
-          <li>Ligne éditoriale, calendrier, guide «&nbsp;ce que vous pouvez dire, ce que vous devez prouver&nbsp;» et 3 gabarits Canva</li>
-          <li>6 posts LinkedIn et 1 newsletter, chacun contrôlé par une checklist de conformité avant publication</li>
-          <li>Bilan de lancement et point de suivi à 3 mois inclus</li>
+          <li>Les règles essentielles (ADEME, ARPP, loi Climat) illustrées par de vraies décisions du Jury de Déontologie Publicitaire</li>
+          <li>Mise en pratique sur une phrase de votre propre site, avec mes retours</li>
+          <li>Un kit à garder&nbsp;: grille d'auto-évaluation, guide et checklist avant publication</li>
+          <li><strong>89&nbsp;€</strong> par participant, <strong>49&nbsp;€</strong> pour les associations</li>
         </ul>
-        <a href="https://calendly.com/anais-manchin-greenphenix/30min" class="offer__cta" target="_blank" rel="noopener">Réserver un appel découverte →</a>
+        <a href="/offres#atelier" class="offer__cta">En savoir plus →</a>
       </div>
 
       <div class="offer">
-        <span class="offer__badge">Offre sur mesure</span>
-        <h3 class="offer__title">Community management pour structures engagées</h3>
+        <span class="offer__badge">Dans la durée</span>
+        <h3 class="offer__title">Accompagnement et community management</h3>
         <ul class="offer__list">
-          <li>Animation LinkedIn, newsletter, site internet en forfait mensuel</li>
-          <li>Création de contenu</li>
-          <li>Une offre sur mesure, adaptée à vos besoins et vos ressources internes</li>
+          <li><strong>Accompagnement mensuel</strong>&nbsp;: un point par mois et la relecture de vos contenus, 300&nbsp;€/mois sans engagement</li>
+          <li><strong>Community management</strong>&nbsp;: une offre sur mesure, je rédige et publie pour vous, chaque contenu vérifié avec la grille. Dès 250&nbsp;€/mois, 3 mois minimum</li>
         </ul>
-        <a href="https://calendly.com/anais-manchin-greenphenix/30min" class="offer__cta" target="_blank" rel="noopener">Réserver un appel découverte →</a>
+        <a href="/offres#accompagnement" class="offer__cta">En savoir plus →</a>
       </div>
     </div>
   </div>
@@ -1430,7 +1516,6 @@
   </div>
 </section>
 
-<!-- Témoignages provisoires (fictifs) — à remplacer par de vrais retours clients -->
 <!-- ================= SECTION 7 : TEMOIGNAGES ================= -->
 <section class="testimonials">
   <div class="testimonials__inner">
@@ -1540,6 +1625,7 @@
     <p class="contact__subtitle">Réservons 30 minutes pour un appel découverte, sans engagement.</p>
 
     <a href="https://calendly.com/anais-manchin-greenphenix/30min" class="contact__cta" target="_blank" rel="noopener">Réserver un appel découverte →</a>
+    <p class="contact__alt"><a href="/diagnostic">ou commencer par le diagnostic offert de votre site</a></p>
 
     <div class="contact__social">
       <a href="https://www.linkedin.com/in/ana%C3%AFs-manchin" class="contact__social-link" aria-label="Green Phénix sur LinkedIn" target="_blank" rel="noopener">
